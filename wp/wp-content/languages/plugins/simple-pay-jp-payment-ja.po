@@ -1,0 +1,94 @@
+# Translation of Plugins - Simple PAY.JP Payment - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Simple PAY.JP Payment - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-12-22 07:47:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Simple PAY.JP Payment - Stable (latest release)\n"
+
+#: simple-payjp-payment.php:78
+msgid "token is empty"
+msgstr "トークンが無効です"
+
+#: simple-payjp-payment.php:175
+msgid "Name"
+msgstr "氏名"
+
+#. Author URI of the plugin
+msgid "https://it-soudan.com/"
+msgstr "https://it-soudan.com/"
+
+#. Author of the plugin
+msgid "koyacode"
+msgstr "koyacode"
+
+#. Description of the plugin
+msgid "Add payment by PAY.JP"
+msgstr "PAY.JPによる支払い機能を追加します"
+
+#: simple-payjp-payment.php:307
+msgid "Save"
+msgstr "変更を保存"
+
+#: simple-payjp-payment.php:294
+msgid "Enable Live"
+msgstr "本番運用する"
+
+#: simple-payjp-payment.php:278
+msgid "Live Secret Key"
+msgstr "本番秘密鍵"
+
+#: simple-payjp-payment.php:286
+msgid "Live Public Key"
+msgstr "本番公開鍵"
+
+#: simple-payjp-payment.php:262
+msgid "Test Secret Key"
+msgstr "テスト秘密鍵"
+
+#: simple-payjp-payment.php:270
+msgid "Test Public Key"
+msgstr "テスト公開鍵"
+
+#. Plugin Name of the plugin
+#: simple-payjp-payment.php:236 simple-payjp-payment.php:237
+msgid "Simple PAY.JP Payment"
+msgstr "Simple PAY.JP Payment"
+
+#: simple-payjp-payment.php:148
+msgid "Invalid form id"
+msgstr "フォームID の値が不正です"
+
+#: simple-payjp-payment.php:143
+msgid "Invalid amount value"
+msgstr "amount の値が不正です"
+
+#: simple-payjp-payment.php:112
+msgid "Payment completed"
+msgstr "支払いが完了しました。"
+
+#: simple-payjp-payment.php:97 simple-payjp-payment.php:159
+msgid "Invalid key"
+msgstr "key の値が不正です"
+
+#: simple-payjp-payment.php:82
+msgid "amount is empty"
+msgstr "amount の値が設定されていません"
+
+#: simple-payjp-payment.php:50 simple-payjp-payment.php:114
+#: simple-payjp-payment.php:117
+msgid "Payment failed"
+msgstr "支払いが失敗しました。"
+
+#. Plugin URI of the plugin
+msgid "https://it-soudan.com/simple-payjp-payment/"
+msgstr "https://it-soudan.com/simple-payjp-payment/"
+
+#: simple-payjp-payment.php:86
+msgid "form id is empty"
+msgstr "form-id の値が空です。"

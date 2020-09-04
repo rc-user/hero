@@ -1,0 +1,14 @@
+*/**/node_modules
+*/**/.vscode
+*/**/.DS_Store
+*/**/.sass-cache/
+*/**/*.ctp
+*/**/*.pm
+*/**/*.dat
+*/**/Thumbs.db
+*/**/dwsync.xhtml
+*/**/dist
+ftp.json
+gulpfile.js
+package.json
+package-lock.json
