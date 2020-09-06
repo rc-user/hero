@@ -1,0 +1,817 @@
+body {
+  font-family: $ff_ja;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  -webkit-backface-visibility: hidden;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: auto;
+  @if $type == sp {
+    margin: auto $margin_sp;
+  }
+}
+
+.ttl-caption {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  letter-spacing: 0.3em;
+  color: #ffc83c;
+  li {
+    position: relative;
+    &:not(:last-child) {
+      padding-right: 60px;
+      &::before,
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: 20px;
+        bottom: 0;
+        display: block;
+        width: 26px;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background-color: #ffc83c;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  margin-bottom: 60px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  span {
+    color: #eb463c;
+  }
+  @if $type == sp {
+    font-size: 3.4rem;
+    margin-bottom: 30px;
+  }
+}
+
+.top {
+  min-height: 1000px;
+  padding: 88px 0 400px;
+  background: $c_base url('../images/insurance_dx_sales/bg_top.png') center no-repeat;
+  background-size: cover;
+  > p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 2.2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+  @if $type == pc {
+    > p {
+      .sp {
+        display: none;
+      }
+    }
+  }
+  @if $type == sp {
+    padding: 40px 0 200px;
+    > p {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.mv {
+  position: relative;
+  margin-bottom: 75px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @if $type == pc {
+    img {
+      min-height: 500px;
+    }
+  }
+  @if $type == sp {
+    margin-bottom: 40px;
+    img {
+      min-height: 400px;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.mv__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+
+  flex-flow: column;
+  justify-content: center;
+  @if $type == sp {
+    margin: 0 $margin_sp;
+  }
+}
+
+.mv__txt {
+  margin-bottom: 30px;
+  > p {
+    font-size: 2.5rem;
+    line-height: 2.1;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    span {
+      line-height: 1;
+      display: inline-block;
+      padding: 6px 6px 8px 10px;
+      background-color: #000000;
+    }
+    b {
+      color: #ffc83c;
+    }
+  }
+  @if $type == sp {
+    margin-bottom: 15px;
+    > p {
+      font-size: 1.6rem;
+      line-height: 2.6;
+      span {
+        padding: 3px 0px 4px 5px;
+      }
+    }
+  }
+}
+
+.mv__period {
+  font-family: $ff_eng;
+  font-weight: 500;
+  dt {
+    font-size: 6rem;
+    > span {
+      background: linear-gradient(transparent 70%, #ffc83c 70%);
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+  dd {
+    font-size: 4rem;
+    line-height: 1;
+    span {
+      background: linear-gradient(transparent 60%, #ffc83c 60%);
+    }
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  @if $type == sp {
+    dt {
+      font-size: 3rem;
+      > span {
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    dd {
+      font-size: 2rem;
+    }
+  }
+}
+
+.entry-btn {
+  margin-bottom: 184px;
+  a {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 20px 19px;
+    transition: 0.3s;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url('../images/insurance_dx_sales/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @if $type == sp {
+    margin-bottom: 92px;
+    a {
+      font-size: 2.2rem;
+      box-sizing: border-box;
+      width: 80%;
+      padding: 14px 10px;
+      border-radius: 6px;
+      background-position: center right 10px;
+      background-size: 24px;
+    }
+  }
+}
+
+.profile {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  @if $type == pc {
+    padding: 54px 0 0 200px;
+  }
+}
+
+.profile__img {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @if $type == pc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 320px;
+  }
+  @if $type == sp {
+    img {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+.profile__txt {
+  font-size: 1.7rem;
+  padding: 40px 48px 40px 176px;
+  background-color: #ffffff;
+  p {
+    line-height: 2.29;
+  }
+  @if $type == sp {
+    font-size: 1.4rem;
+    margin: -50px $margin_sp 0;
+    padding: 80px $margin_sp 20px;
+    p {
+      line-height: 1.8;
+    }
+  }
+}
+
+.profile__txt__wrap {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $c_base;
+  @if $type == sp {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.profile__txt__ttl {
+  font-size: 1.7rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.2em;
+  span {
+    font-size: 4rem;
+    display: block;
+  }
+  @if $type == sp {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+.profile__txt__message {
+  position: relative;
+}
+
+.profile__txt__message__ttl {
+  @if $type == pc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -7.5em;
+    display: flex;
+    margin: auto;
+    letter-spacing: 0.1em;
+
+    align-items: center;
+  }
+  @if $type == sp {
+    margin-bottom: 1em;
+    br {
+      display: none;
+    }
+  }
+}
+
+.movie {
+  max-width: 1000px;
+  margin: -212px auto 0;
+  padding-bottom: calc(212px + 90px);
+  color: $c_base;
+  iframe {
+    width: 100%;
+    max-width: 1000;
+    max-height: 563px;
+    margin-bottom: 64px;
+  }
+  @if $type == sp {
+    box-sizing: border-box;
+    margin: -106px 0 0;
+    padding: 0 $margin_sp 45px;
+    iframe {
+      margin: 0 0 32px;
+    }
+  }
+}
+
+.movie__txt {
+  p {
+    font-size: 2.5rem;
+    line-height: 2.4;
+    letter-spacing: 0.1em;
+  }
+  @if $type == pc {
+    padding-left: 134px;
+  }
+  @if $type == sp {
+    margin: 0 $margin_sp;
+    p {
+      font-size: 1.8rem;
+      line-height: 2;
+      .pc {
+        display: none;
+      }
+    }
+  }
+}
+
+.movie__ttl {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.15em;
+  @if $type == sp {
+    font-size: 3rem;
+  }
+}
+
+.skill {
+  padding: 176px 0 200px;
+  color: #ffffff;
+  background: $c_base url('../images/insurance_dx_sales/bg_skill.png') center no-repeat;
+  background-size: cover;
+  span {
+    color: #ffc83c;
+  }
+  @if $type == sp {
+    padding: 88px 0 100px;
+  }
+}
+
+.skill__ttl {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 2em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  @if $type == pc {
+    .sp {
+      display: none;
+    }
+  }
+  @if $type == sp {
+    font-size: 2.5rem;
+  }
+}
+
+.skill__list {
+  font-size: 2.7rem;
+  max-width: 840px;
+  margin: auto;
+  letter-spacing: 0.15em;
+  li {
+    font-weight: 400;
+    position: relative;
+    padding-left: 60px;
+    list-style: none;
+    counter-increment: skill-num;
+    &::before,
+    &::after {
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+    }
+    &::before {
+      width: 40px;
+      height: 40px;
+      background-color: #ffc83c;
+    }
+    &::after {
+      font-family: $ff_eng;
+      font-size: 2.5rem;
+      top: 8px;
+      left: 12px;
+      content: counter(skill-num);
+      color: $c_base;
+    }
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+  span {
+    color: #ffc83c;
+  }
+  @if $type == sp {
+    font-size: 1.8rem;
+    margin: 0 $margin_sp;
+    li {
+      padding-left: 30px;
+      &::before {
+        top: 4px;
+        width: 20px;
+        height: 20px;
+      }
+      &::after {
+        font-size: 1.7rem;
+        top: 6px;
+        left: 5px;
+      }
+    }
+  }
+}
+
+.entry {
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 0;
+  color: $c_base;
+  @if $type == sp {
+    padding: 50px $margin_sp;
+  }
+}
+
+.entry__ttl {
+  font-size: 5rem;
+  margin-bottom: 1em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  @if $type == pc {
+    .sp {
+      display: none;
+    }
+  }
+  @if $type == sp {
+    font-size: 2.5rem;
+  }
+}
+
+.entry__period {
+  font-size: 2.2rem;
+  line-height: 1.2272;
+  margin-bottom: 70px;
+  text-align: center;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  @if $type == pc {
+    li {
+      .sp {
+        display: none;
+      }
+    }
+  }
+  @if $type == sp {
+    line-height: 1.6;
+  }
+}
+
+.entry__form {
+  input[type='text'] {
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    outline: none;
+    &:focus {
+      border: 1px solid #217fc4;
+    }
+  }
+}
+
+.entry__form__table {
+  font-size: 2.5rem;
+  th {
+    width: 8em;
+    text-align: center;
+    vertical-align: middle;
+  }
+  @if $type == pc {
+    th,
+    td {
+      padding-bottom: 28px;
+    }
+    td {
+      padding-left: 2em;
+    }
+  }
+  @if $type == sp {
+    font-size: 1.6rem;
+    th,
+    td {
+      display: block;
+      text-align: left;
+    }
+    th {
+      font-size: 2rem;
+      padding-bottom: 10px;
+    }
+    td {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.entry__form__table__radio {
+  display: flex;
+
+  align-items: center;
+  #Proceedpaymode_120_40 {
+    display: none;
+  }
+  .paymode_radio {
+    position: relative;
+    display: flex;
+    padding-left: 40px;
+
+    align-items: center;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      box-sizing: border-box;
+      margin: auto;
+      content: '';
+      border-radius: 50%;
+    }
+    &::before {
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $c_base;
+    }
+    &::after {
+      left: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: $c_base;
+    }
+  }
+  @if $type == pc {
+    .sp {
+      display: none;
+    }
+  }
+  @if $type == sp {
+    .paymode_radio {
+      &::before {
+        left: 0;
+        width: 26px;
+        height: 26px;
+      }
+      &::after {
+        left: 6px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+.entry__form__table__mail {
+  th {
+    span {
+      display: flex;
+      &::after {
+        width: 1em;
+        height: 1.2em;
+        content: '*';
+        color: #ee3322;
+      }
+    }
+  }
+  input[type='text'] {
+    background-color: #ffdddd;
+  }
+}
+
+.entry__notice {
+  margin-bottom: 70px;
+  p {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+}
+
+.entry__btn {
+  text-align: center;
+  input[type=submit] {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 24px 20px 23px;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url('../images/insurance_dx_sales/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @if $type == sp {
+    input[type=submit] {
+      font-size: 2.2rem;
+      box-sizing: border-box;
+      max-width: 80%;
+      padding: 17px 10px 16px;
+      border-radius: 6px;
+      background-position: center right 10px;
+      background-size: 24px;
+    }
+  }
+}
+
+.privacy {
+  box-sizing: border-box;
+  max-width: 840px;
+  margin: auto;
+  padding-bottom: 100px;
+  letter-spacing: 0.1em;
+  p {
+    font-size: 1.4rem;
+    line-height: 2.714;
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+  @if $type == sp {
+    padding: 0 $margin_sp 50px;
+    p {
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+}
+
+.privacy__ttl {
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+  text-align: center;
+  @if $type == sp {
+    font-size: 1.6rem;
+  }
+}
+
+#footer {
+  padding: 70px 0;
+  color: #323232;
+  background-color: #dce1e6;
+  @if $type == sp {
+    padding: 35px $margin_sp;
+  }
+}
+
+.footer__wrap {
+  font-weight: 300;
+  max-width: 1000px;
+  margin: auto;
+
+  @if $type == pc {
+    display: flex;
+    &:nth-of-type(1) {
+      margin-bottom: 28px;
+
+      align-items: flex-end;
+    }
+  }
+}
+
+.footer__logo {
+  width: 156px;
+  margin-right: 40px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer__info {
+  line-height: 2;
+  p {
+    margin: 0;
+  }
+  @if $type == sp {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__info__ttl {
+  font-size: 2rem;
+}
+
+.footer__nav {
+  margin-right: auto;
+  ul {
+    list-style: none;
+  }
+  a {
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: #323232;
+  }
+  @if $type == pc {
+    ul {
+      display: flex;
+    }
+    li {
+      &:not(:last-child) {
+        margin-right: 22px;
+        padding-right: 22px;
+        border-right: 1px solid #323232;
+      }
+    }
+  }
+  @if $type == sp {
+    ul {
+      margin-bottom: 30px;
+    }
+    li {
+      padding-bottom: 15px;
+      text-align: center;
+      border-bottom: 1px solid #323232;
+      &:first-child {
+        padding-top: 15px;
+        border-top: 1px solid #323232;
+      }
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.copyright {
+  small {
+    font-family: $ff_eng;
+    font-size: 1rem;
+  }
+}

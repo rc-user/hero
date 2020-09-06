@@ -1,0 +1,20 @@
+// Break Point ---------------------------------------------
+$breakpoint_sp: 1000px;
+$breakpoint_tb: 800px;
+$breakpoint_pc: $breakpoint_sp + 1;
+
+// Margin ---------------------------------------------
+$margin_sp: 10px;
+
+// Color ---------------------------------------------------
+$c_base: #23324B;//サイトカラー
+$c_text: #3d3333; // テキストに使うフォントカラー
+$c_href: #000000; // テキスト内で使うリンクカラー
+
+// Font Family
+$ff_ja: 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif; //日本語用
+$ff_ttl: 'M PLUS Rounded 1c','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif; //見出し用
+
+$ff_eng: 'Roboto', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif; //日本語用
+
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Roboto:wght@300;500&display=swap);
