@@ -17,6 +17,31 @@ Template Name: LPページ
   <?php wp_head(); ?>
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lp.css" />
 
+  <!-- Facebook Pixel Code -->
+  <script>
+  ! function(f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function() {
+      n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2858941054205837');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2858941054205837&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -132,15 +157,15 @@ Template Name: LPページ
                 </th>
                 <td>
                   <div class="entry__form__table__radio">
-                    <input name="data[Proceed][paymode]" type="radio" id="Proceedpaymode_120_40" value="120_40" checked="checked" />
-                    <label for="Proceedpaymode_120_40" class="paymode_radio" required="required">クレジットカードでの一括払い<br class="sp">(代行業者：Stripe)</label>
+                    <input name="data[Proceed][paymode]" type="radio" id="Proceedpaymode_120_42" value="120_42" checked="checked" />
+                    <label for="Proceedpaymode_120_42" class="paymode_radio" required="required">クレジットカードでの一括払い<br class="sp">(代行業者：Stripe)</label>
                   </div>
                 </td>
               </tr>
               <tr>
                 <th>
                   <span class="required">
-                    <label for="Username1" class="form_input_label ">姓</label>
+                    <label for="Username1" class="form_input_label  required">姓</label>
                   </span>
                 </th>
                 <td>
@@ -150,12 +175,12 @@ Template Name: LPページ
               <tr>
                 <th>
                   <span class="required">
-                    <label for="Username2" class="form_input_label ">名</label>
+                    <label for="Username2" class="form_input_label  required">名</label>
                   </span>
                 </th>
                 <td><input name="data[User][name2]" id="Username2" value="" class="required" type="text" required="required" /></td>
               </tr>
-              <tr class="entry__form__table__mail">
+              <tr>
                 <th>
                   <span class="required">
                     <label for="Usermail" class="form_input_label  required">メールアドレス</label>
@@ -272,9 +297,8 @@ Template Name: LPページ
             <!-- ▼リファラ -->
             <input type="hidden" name="data[User][referer_form_url]" value="" class="UserRefererFormUrl" />
             <input type="hidden" name="data[User][referer_url]" value="" class="UserRefererUrl" />
-            ​
             <script type="text/javascript">
-            < !--
+            <!--
             if (document.referrer.length != 0) {
               if (document.getElementsByClassName("UserRefererUrl")) {
                 var user_referer_url = document.getElementsByClassName("UserRefererUrl");
@@ -285,8 +309,6 @@ Template Name: LPページ
                 document.getElementById("UserRefererUrl").value = document.referrer;
               }
             }
-
-
             if (document.getElementsByClassName("UserRefererFormUrl")) {
               var user_referer_form_url = document.getElementsByClassName("UserRefererFormUrl");
               for (var i = 0; i < user_referer_form_url.length; i++) {
@@ -295,7 +317,8 @@ Template Name: LPページ
             } else if (document.getElementById("UserRefererFormUrl")) {
               document.getElementById("UserRefererFormUrl").value = location.href;
             }
-            //-->
+            //
+            -->
             </script>
             <!-- ▲リファラ -->
             ​
@@ -303,7 +326,7 @@ Template Name: LPページ
         </div>
         <!-- /.entry__form -->
 
-        <script src="https://hero-t.com/js/validation.js?d=20200907174046"></script>
+        <script src="https://hero-t.com/js/validation.js?d=20200908165152"></script>
       </section>
 
       <section class="privacy">
