@@ -70,7 +70,7 @@ h1 {
 
 .top {
   min-height: 1000px;
-  padding: 88px 0 400px;
+  padding: 88px 0 360px;
   background: $c_base url('../images/insurance_dx_sales/bg_top.png') center no-repeat;
   background-size: cover;
   > p {
@@ -92,7 +92,7 @@ h1 {
     }
   }
   @if $type == sp {
-    padding: 40px 0 200px;
+    padding: 40px 0 180px;
     > p {
       font-size: 1.7rem;
     }
@@ -206,7 +206,7 @@ h1 {
 }
 
 .entry-btn {
-  margin-bottom: 184px;
+  margin-bottom: 100px;
   a {
     font-size: 3.5rem;
     font-weight: 300;
@@ -228,7 +228,7 @@ h1 {
     }
   }
   @if $type == sp {
-    margin-bottom: 92px;
+    margin-bottom: 50px;
     a {
       font-size: 2.2rem;
       box-sizing: border-box;
@@ -341,7 +341,7 @@ h1 {
 .movie {
   max-width: 1000px;
   margin: -212px auto 0;
-  padding-bottom: calc(212px + 90px);
+  padding-bottom: 100px;
   color: $c_base;
   iframe {
     width: 100%;
@@ -390,7 +390,7 @@ h1 {
 }
 
 .skill {
-  padding: 176px 0 200px;
+  padding: 100px 0 120px;
   color: #ffffff;
   background: $c_base url('../images/insurance_dx_sales/bg_skill.png') center no-repeat;
   background-size: cover;
@@ -398,7 +398,7 @@ h1 {
     color: #ffc83c;
   }
   @if $type == sp {
-    padding: 88px 0 100px;
+    padding: 50px 0 60px;
   }
 }
 
@@ -477,7 +477,7 @@ h1 {
   }
 }
 
-.entry {
+#entry {
   box-sizing: border-box;
   max-width: 1000px;
   margin: auto;
@@ -526,13 +526,24 @@ h1 {
 }
 
 .entry__form {
-  input[type='text'] {
+  input[type=text],
+  select {
     border: 1px solid #dbdbdb;
     border-radius: 10px;
     outline: none;
     &:focus {
       border: 1px solid #217fc4;
     }
+  }
+  input[type=text] {
+    &.required {
+      background-color: #ffdddd;
+    }
+  }
+  select {
+    font-size: 1.6rem;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
   }
 }
 
@@ -542,6 +553,16 @@ h1 {
     width: 8em;
     text-align: center;
     vertical-align: middle;
+    span.required {
+      justify-content: center;
+      display: flex;
+      &::after {
+        width: 1em;
+        height: 1.2em;
+        content: '*';
+        color: #ee3322;
+      }
+    }
   }
   @if $type == pc {
     th,
@@ -627,22 +648,6 @@ h1 {
   }
 }
 
-.entry__form__table__mail {
-  th {
-    span {
-      display: flex;
-      &::after {
-        width: 1em;
-        height: 1.2em;
-        content: '*';
-        color: #ee3322;
-      }
-    }
-  }
-  input[type='text'] {
-    background-color: #ffdddd;
-  }
-}
 
 .entry__notice {
   margin-bottom: 70px;

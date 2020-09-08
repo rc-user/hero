@@ -182,10 +182,10 @@ ul {
   }
   .top {
     min-height: 1000px;
-    padding: 88px 0 400px;
+    padding: 88px 0 360px;
     background: #23324B url("../images/insurance_dx_sales/bg_top.png") center no-repeat;
     background-size: cover;
-    padding: 40px 0 200px;
+    padding: 40px 0 180px;
   }
   .top > p {
     font-size: 2.5rem;
@@ -302,8 +302,8 @@ ul {
     font-size: 2rem;
   }
   .entry-btn {
-    margin-bottom: 184px;
-    margin-bottom: 92px;
+    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .entry-btn a {
     font-size: 3.5rem;
@@ -397,7 +397,7 @@ ul {
   .movie {
     max-width: 1000px;
     margin: -212px auto 0;
-    padding-bottom: calc(212px + 90px);
+    padding-bottom: 100px;
     color: #23324B;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -435,11 +435,11 @@ ul {
     font-size: 3rem;
   }
   .skill {
-    padding: 176px 0 200px;
+    padding: 100px 0 120px;
     color: #ffffff;
     background: #23324B url("../images/insurance_dx_sales/bg_skill.png") center no-repeat;
     background-size: cover;
-    padding: 88px 0 100px;
+    padding: 50px 0 60px;
   }
   .skill span {
     color: #ffc83c;
@@ -507,7 +507,7 @@ ul {
     top: 6px;
     left: 5px;
   }
-  .entry {
+  #entry {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 1000px;
@@ -533,13 +533,23 @@ ul {
   .entry__period li:not(:last-child) {
     margin-bottom: 1em;
   }
-  .entry__form input[type='text'] {
+  .entry__form input[type=text],
+  .entry__form select {
     border: 1px solid #dbdbdb;
     border-radius: 10px;
     outline: none;
   }
-  .entry__form input[type='text']:focus {
+  .entry__form input[type=text]:focus,
+  .entry__form select:focus {
     border: 1px solid #217fc4;
+  }
+  .entry__form input[type=text].required {
+    background-color: #ffdddd;
+  }
+  .entry__form select {
+    font-size: 1.6rem;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
   }
   .entry__form__table {
     font-size: 2.5rem;
@@ -549,6 +559,22 @@ ul {
     width: 8em;
     text-align: center;
     vertical-align: middle;
+  }
+  .entry__form__table th span.required {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .entry__form__table th span.required::after {
+    width: 1em;
+    height: 1.2em;
+    content: '*';
+    color: #ee3322;
   }
   .entry__form__table th,
   .entry__form__table td {
@@ -619,21 +645,6 @@ ul {
     left: 6px;
     width: 14px;
     height: 14px;
-  }
-  .entry__form__table__mail th span {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .entry__form__table__mail th span::after {
-    width: 1em;
-    height: 1.2em;
-    content: '*';
-    color: #ee3322;
-  }
-  .entry__form__table__mail input[type='text'] {
-    background-color: #ffdddd;
   }
   .entry__notice {
     margin-bottom: 70px;
@@ -832,7 +843,7 @@ ul {
   }
   .top {
     min-height: 1000px;
-    padding: 88px 0 400px;
+    padding: 88px 0 360px;
     background: #23324B url("../images/insurance_dx_sales/bg_top.png") center no-repeat;
     background-size: cover;
   }
@@ -930,7 +941,7 @@ ul {
     margin-bottom: 1em;
   }
   .entry-btn {
-    margin-bottom: 184px;
+    margin-bottom: 100px;
   }
   .entry-btn a {
     font-size: 3.5rem;
@@ -1014,7 +1025,7 @@ ul {
   .movie {
     max-width: 1000px;
     margin: -212px auto 0;
-    padding-bottom: calc(212px + 90px);
+    padding-bottom: 100px;
     color: #23324B;
   }
   .movie iframe {
@@ -1037,7 +1048,7 @@ ul {
     letter-spacing: 0.15em;
   }
   .skill {
-    padding: 176px 0 200px;
+    padding: 100px 0 120px;
     color: #ffffff;
     background: #23324B url("../images/insurance_dx_sales/bg_skill.png") center no-repeat;
     background-size: cover;
@@ -1095,7 +1106,7 @@ ul {
   .skill__list span {
     color: #ffc83c;
   }
-  .entry {
+  #entry {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 1000px;
@@ -1124,13 +1135,23 @@ ul {
   .entry__period li .sp {
     display: none;
   }
-  .entry__form input[type='text'] {
+  .entry__form input[type=text],
+  .entry__form select {
     border: 1px solid #dbdbdb;
     border-radius: 10px;
     outline: none;
   }
-  .entry__form input[type='text']:focus {
+  .entry__form input[type=text]:focus,
+  .entry__form select:focus {
     border: 1px solid #217fc4;
+  }
+  .entry__form input[type=text].required {
+    background-color: #ffdddd;
+  }
+  .entry__form select {
+    font-size: 1.6rem;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
   }
   .entry__form__table {
     font-size: 2.5rem;
@@ -1139,6 +1160,22 @@ ul {
     width: 8em;
     text-align: center;
     vertical-align: middle;
+  }
+  .entry__form__table th span.required {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .entry__form__table th span.required::after {
+    width: 1em;
+    height: 1.2em;
+    content: '*';
+    color: #ee3322;
   }
   .entry__form__table th,
   .entry__form__table td {
@@ -1197,21 +1234,6 @@ ul {
   }
   .entry__form__table__radio .sp {
     display: none;
-  }
-  .entry__form__table__mail th span {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .entry__form__table__mail th span::after {
-    width: 1em;
-    height: 1.2em;
-    content: '*';
-    color: #ee3322;
-  }
-  .entry__form__table__mail input[type='text'] {
-    background-color: #ffdddd;
   }
   .entry__notice {
     margin-bottom: 70px;
