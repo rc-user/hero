@@ -144,57 +144,70 @@ Template Name: LPページ
           <li>開催日②：<br class="sp">2020年9月26日(土) 11時〜13時 <br class="sp">定員50名</li>
         </ul>
 
-        <div class="entry__form">
-          <form action="https://hero-t.com/p/r/QuOhQ8vt" enctype="multipart/form-data" id="UserItemForm" class="myForm" method="post" accept-charset="utf-8">
-            <input type="hidden" name="_method" value="POST" />
+        <p class="entry__price">参加費：5500円（税込）</p>
 
-            <table class="entry__form__table">
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Userpaymode" class="form_input_label">お支払い方法</label>
-                  </span>
-                </th>
-                <td>
-                  <div class="entry__form__table__radio">
+        <div class="entry__form">
+          <form action="https://hero-t.com/p/r/NLfDEhki" enctype="multipart/form-data" id="UserItemForm" class="myForm" method="post" accept-charset="utf-8">
+            <input type="hidden" name="_method" value="POST" />
+            <!-- お支払い方法 -->
+            <div class="input radiobutton input_unit  ">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Userpaymode" class="form_input_label required">お支払い方法</label> </div>
+              </div>
+              <div class="my_column my_right">
+                <div class="radiobutton_frame">
+                  <div class="radiobutton_input">
                     <input name="data[Proceed][paymode]" type="radio" id="Proceedpaymode_120_42" value="120_42" checked="checked" />
-                    <label for="Proceedpaymode_120_42" class="paymode_radio" required="required">クレジットカードでの一括払い<br class="sp">(代行業者：Stripe)</label>
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Username1" class="form_input_label  required">姓</label>
-                  </span>
-                </th>
-                <td>
-                  <input name="data[User][name1]" id="Username1" value="" class="required" type="text" required="required" />
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Username2" class="form_input_label  required">名</label>
-                  </span>
-                </th>
-                <td><input name="data[User][name2]" id="Username2" value="" class="required" type="text" required="required" /></td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Usermail" class="form_input_label  required">メールアドレス</label>
-                  </span>
-                </th>
-                <td>
-                  <input name="data[User][mail]" id="Usermail" value="" class=" required" type="text" required="required" />
-                </td>
-              </tr>
-              <tr>
-                <th>
+                  <div class="radiobutton_label">
+                    <label for="Proceedpaymode_120_42" class="paymode_radio">クレジットカードでの一括払い<br class="sp">(代行業者：Stripe)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 姓 -->
+            <div class="input text input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Username1" class="form_input_label  required">姓</label>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <input name="data[User][name1]" id="Username1" value="" class=" required" type="text" required="required" />
+              </div>
+            </div>
+            <!-- 名 -->
+            <div class="input text input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Username2" class="form_input_label  required">名</label>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <input name="data[User][name2]" id="Username2" value="" class=" required" type="text" required="required" />
+              </div>
+            </div>
+            <!-- メールアドレス -->
+            <div class="input text input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Usermail" class="form_input_label  required">メールアドレス</label>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <input name="data[User][mail]" id="Usermail" value="" class=" required" type="text" required="required" />
+              </div>
+            </div>
+            <!-- 都道府県 -->
+            <div class="input select input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
                   <label for="Userpref" class="form_input_label  required">都道府県</label>
-                </th>
-                <td>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <div class="select_frame">
                   <select name="data[User][pref]" id="Userpref" class="form_input_input  required">
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
@@ -244,56 +257,53 @@ Template Name: LPページ
                     <option value="鹿児島県">鹿児島県</option>
                     <option value="沖縄県">沖縄県</option>
                   </select>
-                </td>
-              </tr>
-              <tr>
-                <th>
+                </div>
+              </div>
+            </div>
+            <!-- 住所 -->
+            <div class="input text input_unit ">
+              <div class="my_column my_left">
+                <div class="label_frame">
                   <label for="Userzip" class="form_input_label ">住所</label>
-                </th>
-                <td>
-                  <input name="data[User][zip]" id="Userzip" value="" class="" type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Usertel" class="form_input_label  required">電話番号</label>
-                  </span>
-                </th>
-                <td>
-                  <input name="data[User][tel]" id="Usertel" value="" class=" required" type="text" required="required" />
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <span class="required">
-                    <label for="Userfree1" class="form_input_label  required">参加予定日</label>
-                  </span>
-                </th>
-                <td>
-                  <select name="data[User][free1]" id="Userfree1" class="form_input_input  required" required="required">
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <input name="data[User][zip]" id="Userzip" value="" class="" type="text" />
+              </div>
+            </div>
+            <!-- 電話番号 -->
+            <div class="input text input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Usertel" class="form_input_label  required">電話番号</label>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <input name="data[User][tel]" id="Usertel" value="" class=" required" type="text" required="required" />
+              </div>
+            </div>
+            <!-- 参加予定日 -->
+            <div class="input select input_unit  required">
+              <div class="my_column my_left">
+                <div class="label_frame">
+                  <label for="Userfree1" class="form_input_label  required">参加予定日</label>
+                </div>
+              </div>
+              <div class="my_column my_right">
+                <div class="select_frame">
+                  <select name="data[User][free1]" id="Userfree1" class="form_input_input  required">
                     <option value="2020/9/23 19:00-21:00">2020/9/23 19:00-21:00</option>
                     <option value="2020/9/26 11:00-13:00">2020/9/26 11:00-13:00</option>
                   </select>
-                </td>
-              </tr>
-            </table>
-
-
-            <!-- 画像認証 -->
-
-            <div class="entry__notice">
-              <p>※ お申し込みフォームの送信後、クレジット決済画面に自動的に切り替わります。クレジット決済完了後、ご入会となりますので最後までご入力をお願いいたします。<br>尚、決済画面に自動的に切り替わらない場合は恐れ入りますが事務局（cs@heros.support）までご連絡お願いいたします。</p>
+                </div>
+              </div>
             </div>
-
-
+            <!-- 画像認証 -->
             <!-- 確認ボタン -->
-            <div class="entry__btn">
+            <div class="submit form_input_submit">
               <input type="submit" value="確認する" />
             </div>
-
             <input type="hidden" id="server_url" value="https://hero-t.com/" />
-
             <!-- ▼リファラ -->
             <input type="hidden" name="data[User][referer_form_url]" value="" class="UserRefererFormUrl" />
             <input type="hidden" name="data[User][referer_url]" value="" class="UserRefererUrl" />
@@ -321,7 +331,6 @@ Template Name: LPページ
             -->
             </script>
             <!-- ▲リファラ -->
-            ​
           </form>
         </div>
         <!-- /.entry__form -->

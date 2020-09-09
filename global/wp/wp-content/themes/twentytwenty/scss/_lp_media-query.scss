@@ -525,6 +525,15 @@ h1 {
   }
 }
 
+.entry__price {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 70px;
+  @if $type == sp {
+    font-size: 2.6rem;
+  }
+}
+
 .entry__form {
   input[type=text],
   select {
@@ -545,52 +554,41 @@ h1 {
     padding: 1.5rem 1.8rem;
     cursor: pointer;
   }
-}
-
-.entry__form__table {
-  font-size: 2.5rem;
-  th {
-    width: 8em;
-    text-align: center;
-    vertical-align: middle;
-    span.required {
-      justify-content: center;
-      display: flex;
-      &::after {
+  .input {
+    margin-bottom: 28px;
+  }
+  .form_input_label {
+    &.required::after {
         width: 1em;
         height: 1.2em;
         content: '*';
         color: #ee3322;
       }
-    }
   }
   @if $type == pc {
-    th,
-    td {
-      padding-bottom: 28px;
+    .input {
+      display: flex;
+      justify-content: space-between;
     }
-    td {
-      padding-left: 2em;
+    .my_left {
+      text-align: center;
+      font-size: 2.5rem;
+      width: 8em;
+    }
+    .my_right {
+      font-size: 2.5rem;
+      width: calc(100% - 8em - 40px);
     }
   }
   @if $type == sp {
-    font-size: 1.6rem;
-    th,
-    td {
-      display: block;
-      text-align: left;
-    }
-    th {
+    .my_left {
+      margin-bottom: 10px;
       font-size: 2rem;
-      padding-bottom: 10px;
-    }
-    td {
-      padding-bottom: 30px;
     }
   }
 }
 
-.entry__form__table__radio {
+.radiobutton_frame {
   display: flex;
 
   align-items: center;
@@ -648,16 +646,8 @@ h1 {
   }
 }
 
-
-.entry__notice {
-  margin-bottom: 70px;
-  p {
-    font-size: 1.3rem;
-    line-height: 2;
-  }
-}
-
-.entry__btn {
+.form_input_submit {
+  margin-top: 50px;
   text-align: center;
   input[type=submit] {
     font-size: 3.5rem;
@@ -691,6 +681,14 @@ h1 {
       background-position: center right 10px;
       background-size: 24px;
     }
+  }
+}
+
+.entry__notice {
+  margin-bottom: 70px;
+  p {
+    font-size: 1.3rem;
+    line-height: 2;
   }
 }
 
