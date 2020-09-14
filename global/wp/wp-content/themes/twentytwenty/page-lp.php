@@ -356,7 +356,7 @@ Template Name: LPページ
       <!-- /.footer__logo -->
 
       <div class="footer__info">
-        <h3 class="footer__info__ttl">サ・ヒーロートレーニング 事務局</h3>
+        <h3 class="footer__info__ttl">ザ・ヒーロートレーニング 事務局</h3>
         <p>〒550-0011 大阪府大阪市西区阿波座1-7-12 東新ビル5F<br>TEL. 06-6123-7650　　MAIL. cs@heros.support</p>
       </div>
       <!-- /.footer__info -->
