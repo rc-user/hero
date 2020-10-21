@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// Import
+@import "include/_reset";
+@import "include/_variable";
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
+// MEDIA QUERY
+//-----------------------------------------------------------------
+
+// Small Display -------------------------------------------------- //
+@media screen and(max-width:$breakpoint_sp) {
+	$type: sp;
+	@import "_common_media-query";
+}
+
+// Large Display -------------------------------------------------- //
+@media print, screen and (min-width:$breakpoint_pc) {
+	$type: pc;
+	@import "_common_media-query";
+}
+
+// Print CSS -------------------------------------------------- //
+@media print {
+}

@@ -1,0 +1,133 @@
+@media screen and (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    margin-top: 20px;
+  }
+  .present img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .mv {
+    min-height: 929px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .vida {
+    min-height: 1104px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .entry {
+    position: relative;
+  }
+  .entry__img {
+    max-width: 2000px;
+    height: 1290px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .entry__btn {
+    position: absolute;
+    top: 1050px;
+    right: 0;
+    left: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .entry__btn:hover {
+    opacity: 0.7;
+  }
+  .entry__btn img {
+    display: block;
+    width: 525px;
+  }
+  .follow__btn {
+    position: absolute;
+    top: 370px;
+    left: calc(50% + 130px);
+    width: 316px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .follow__btn:hover {
+    opacity: 0.7;
+  }
+  .follow__btn img {
+    display: block;
+  }
+  .info {
+    max-width: 2000px;
+    height: 1520px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+@media print, screen and (min-width: 1025px) {
+  .sp {
+    margin-top: 20px;
+    display: none;
+  }
+  .present img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .mv {
+    min-height: 929px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .vida {
+    min-height: 1104px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .entry {
+    position: relative;
+  }
+  .entry__img {
+    max-width: 2000px;
+    height: 1290px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .entry__btn {
+    position: absolute;
+    top: 1050px;
+    right: 0;
+    left: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .entry__btn:hover {
+    opacity: 0.7;
+  }
+  .entry__btn img {
+    display: block;
+    width: 525px;
+  }
+  .follow__btn {
+    position: absolute;
+    top: 370px;
+    left: calc(50% + 130px);
+    width: 316px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .follow__btn:hover {
+    opacity: 0.7;
+  }
+  .follow__btn img {
+    display: block;
+  }
+  .info {
+    max-width: 2000px;
+    height: 1520px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}

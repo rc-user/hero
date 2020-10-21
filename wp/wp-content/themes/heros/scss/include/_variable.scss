@@ -1,0 +1,17 @@
+// Break Point ---------------------------------------------
+$breakpoint_sp: 1024px;
+$breakpoint_pc: $breakpoint_sp + 1;
+
+$pc_width: 1280px;
+$margin_sp: 10vw;
+
+// Color ---------------------------------------------------
+$c_base: #D93915;
+$c_text: #282828; // テキストに使うフォントカラー
+$c_href: #282828; // テキスト内で使うリンクカラー
+
+
+// Font Family
+$ff_ja: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif; //日本語用
+$ff_eng: 'Roboto', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif; //英語用
+$ff_mincho: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN','HG明朝E','ＭＳ Ｐ明朝','ＭＳ 明朝',serif;

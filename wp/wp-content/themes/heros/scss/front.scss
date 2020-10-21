@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// Import
+@import "include/_variable";
+
+// MEDIA QUERY
+//-----------------------------------------------------------------
+
+// Small Display -------------------------------------------------- //
+@media screen and(max-width:$breakpoint_sp) {
+	$type: sp;
+	@import "_front_media-query";
+}
+
+// Large Display -------------------------------------------------- //
+@media print, screen and (min-width:$breakpoint_pc) {
+	$type: pc;
+	@import "_front_media-query";
+}
+
+// Print CSS -------------------------------------------------- //
+@media print {
+}

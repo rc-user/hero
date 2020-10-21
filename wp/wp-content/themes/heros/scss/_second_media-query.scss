@@ -1,0 +1,1053 @@
+.second__mv {
+  @if $type == pc {
+    display: flex;
+    height: 400px;
+  }
+}
+
+.second__mv__ttl {
+  font-family: $ff_eng;
+  font-size: 7rem;
+  font-weight: 500;
+  display: flex;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  background-color: $c_base;
+
+  align-items: center;
+  justify-content: center;
+  @if $type == pc {
+    width: 700px;
+  }
+  @if $type == sp {
+    font-size: 4rem;
+    height: 130px;
+  }
+}
+
+.second__mv__img {
+  width: 100%;
+
+  flex: 1;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    object-fit: cover;
+    object-position: center;
+  }
+  @if $type == sp {
+    height: 130px;
+  }
+}
+
+.seminar-list {
+  margin: auto;
+  @if $type == pc {
+    display: flex;
+
+    flex-flow: wrap;
+  }
+}
+
+.seminar-list__item {
+  background-color: #ffffff;
+  a {
+    display: block;
+    padding: 10px 25px 28px;
+    &::before {
+      font-size: 1.4rem;
+      font-weight: bold;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      margin: 0 0 9px -15px;
+      letter-spacing: 0.10em;
+      color: #ffffff;
+      border-radius: 50%;
+      background-color: $c_base;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.428571428571429;
+    letter-spacing: 0.03em;
+  }
+  @if $type == pc {
+    width: calc((100% - 50px * 2) / 3);
+    &:not(:nth-of-type(3n)) {
+      margin-right: 50px;
+    }
+    &:not(:nth-of-type(-n+3)) {
+      margin-top: 50px;
+    }
+  }
+  @if $type == sp {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    a {
+      &::before {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.seminar-list__item--new {
+  a {
+    &::before {
+      content: '新着';
+    }
+  }
+}
+
+.seminar-list__item--entry {
+  a {
+    &::before {
+      content: '受付中';
+      background-color: #005a87;
+    }
+  }
+}
+
+.seminar-list__item--end {
+  a {
+    &::before {
+      content: '終了';
+      background-color: #787878;
+    }
+  }
+}
+
+.seminar-list__ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.333333333333333;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.seminar-list__img {
+  margin-bottom: 16px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transition: 0.3s;
+    a:hover & {
+      opacity: 0.7;
+    }
+  }
+}
+
+.seminar-list__time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  letter-spacing: 0.15em;
+  &::before {
+    margin-right: auto;
+    content: '開催日';
+  }
+  &::after {
+    content: '-';
+  }
+}
+
+//===========================================
+//  SEMINAR
+//===========================================
+
+.seminar__contents {
+  margin: 110px 0 245px;
+  @if $type == sp {
+    margin: 43px 0 183px;
+  }
+}
+
+.seminar__ttl {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-bottom: 96px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $c_base;
+  @if $type == sp {
+    font-size: 2.5rem;
+    margin-bottom: 31px;
+  }
+}
+
+//===========================================
+//  NEWS
+//===========================================
+
+.news__contents {
+  margin: 235px auto;
+  @if $type == sp {
+    margin: 50px 0 200px;
+  }
+}
+
+.news__list {
+  li {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #707070;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @if $type == pc {
+    li {
+      display: flex;
+
+      align-items: center;
+    }
+  }
+}
+
+.news__list__time {
+  font-size: 2rem;
+  font-weight: bold;
+  @if $type == pc {
+    margin: 0 50px 0 65px;
+  }
+  @if $type == sp {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+
+.news__list__txt {
+  letter-spacing: 0.02em;
+  p {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+
+.news__list__ttl {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+  color: $c_base;
+}
+
+//===========================================
+//  CONCEPT
+//===========================================
+
+.concept__contents {
+  margin: 190px 0 300px;
+  > p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2.8;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $c_base;
+
+    &:not(:last-child) {
+      margin-bottom: 6em;
+    }
+  }
+  @if $type == sp {
+    margin: 66px 0 170px;
+    > p {
+      font-size: 1.6rem;
+      line-height: 2.1875;
+      letter-spacing: 0.02em;
+      &:not(:last-child) {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}
+
+.concept__ttl {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1.2;
+  box-sizing: border-box;
+  margin: 0 auto 90px;
+  padding: 9px 50px;
+  color: #ffffff;
+  background-color: $c_base;
+
+  &:not(:first-child) {
+    margin-top: 200px;
+  }
+  @if $type == pc {
+    display: table;
+  }
+  @if $type == sp {
+    font-size: 4rem;
+    line-height: 1.375;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 10px 0;
+    text-align: center;
+    &:not(:first-child) {
+      margin-top: 44px;
+    }
+  }
+}
+
+.concept__trainer {
+  margin-top: 260px;
+  @if $type == sp {
+    margin-top: 80px;
+  }
+}
+
+.concept__trainer__ttl {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 100px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $c_base;
+
+  @if $type == sp {
+    font-size: 3rem;
+    margin-bottom: 47px;
+  }
+}
+
+.concept__trainer__list {
+  > li {
+    &:not(:last-child) {
+      margin-bottom: 200px;
+    }
+  }
+  @if $type == pc {
+    width: 830px;
+    margin: auto;
+    > li {
+      display: flex;
+    }
+  }
+  @if $type == sp {
+    > li {
+      &:not(:last-child) {
+        margin-bottom: 93px;
+      }
+    }
+  }
+}
+
+.concept__trainer__list__img {
+  max-width: 400px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  @if $type == pc {
+    margin-right: 72px;
+  }
+  @if $type == sp {
+    margin-bottom: 14px;
+  }
+}
+
+.concept__trainer__list__flex {
+  @if $type == pc {
+    display: flex;
+
+    flex-flow: column;
+    flex: 1;
+  }
+}
+
+.concept__trainer__list__txt {
+  margin-bottom: auto;
+  letter-spacing: 0.05em;
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.83333333;
+  }
+  @if $type == sp {
+    margin-bottom: 37px;
+    p {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.concept__trainer__list__name {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 63px;
+  span {
+    font-family: $ff_eng;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+    letter-spacing: 0.15em;
+  }
+  @if $type == sp {
+    font-size: 3.5rem;
+    margin-bottom: 34px;
+    text-align: center;
+    span {
+      font-size: 1.4rem;
+      margin-top: 7px;
+    }
+  }
+}
+
+.concept__trainer__list__btn {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @if $type == sp {
+    display: table;
+    margin: auto;
+  }
+}
+
+//===========================================
+//  TRAINER
+//===========================================
+
+.trainer__second {
+  margin: 188px 0 276px;
+  @if $type == sp {
+    margin: 44px 0 192px;
+  }
+}
+
+.trainer__second__wrap {
+  max-width: 1000px;
+  margin: auto;
+  @if $type == pc {
+    padding: 0 43px;
+  }
+  @if $type == sp {
+    margin: 0 $margin_sp;
+  }
+}
+
+.trainer__second__ttl {
+  font-family: $ff_eng;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: 0.15em;
+  @if $type == sp {
+    margin-bottom: 27px;
+    text-align: center;
+  }
+}
+
+.trainer__second__profile {
+  margin-bottom: 148px;
+  @if $type == pc {
+    display: flex;
+  }
+  @if $type == sp {
+    margin-bottom: 39px;
+  }
+}
+
+.trainer__second__profile__img {
+  max-width: 400px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  @if $type == pc {
+    margin-right: 72px;
+  }
+  @if $type == sp {
+    margin-bottom: 29px;
+  }
+}
+
+.trainer__second__profile__txt {
+  p {
+    line-height: 2.1875;
+  }
+  @if $type == pc {
+    display: flex;
+
+    justify-content: flex-end;
+    flex: 1;
+    flex-flow: column;
+    p {
+      margin-top: 83px;
+    }
+  }
+  @if $type == sp {
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+  }
+}
+
+.trainer__second__profile__name {
+  font-size: 4.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  span {
+    font-family: $ff_eng;
+    font-size: 1.5rem;
+    display: block;
+    letter-spacing: 0.15em;
+  }
+  @if $type == sp {
+    margin-bottom: 29px;
+    text-align: center;
+  }
+}
+
+.traniner__contents {
+  margin-bottom: 180px;
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 4px 0;
+    text-align: center;
+    color: $c_base;
+    border: 1px solid $c_base;
+    &:not(:first-child) {
+      margin-top: 110px;
+    }
+  }
+  > p {
+    font-size: 1.8rem;
+    line-height: 2.222222222222222;
+    letter-spacing: 0.02em;
+  }
+  @if $type == pc {
+    h2 {
+      display: inline-block;
+      min-width: 350px;
+    }
+  }
+  @if $type == sp {
+    margin-bottom: 40px;
+    h2 {
+      font-size: 2.2rem;
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+    }
+    > p {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+  }
+}
+
+.traniner__contents__movie {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 200px auto 0;
+  @if $type == sp {
+    height: auto;
+    margin: 100px 0 0;
+  }
+}
+
+.trainer__seminar {
+  margin-bottom: 180px;
+  padding: 69px 0 130px;
+  background-color: $c_base;
+  @if $type == sp {
+    margin-bottom: 55px;
+    padding: 39px 0 45px;
+  }
+}
+
+.trainer__seminar__ttl {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 39px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  @if $type == sp {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+}
+
+.traniner__second__btn {
+  a {
+    font-family: $ff_eng;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    position: relative;
+    display: flex;
+    margin: auto;
+    padding: 40px 0;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    background-color: $c_base;
+
+    justify-content: center;
+    align-items: center;
+    &::before {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      display: block;
+      width: 21px;
+      height: 5px;
+      margin: auto;
+      content: '';
+      transition: 0.3s;
+      background-image: url('../images/common/arrow.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      &::before {
+        right: 15px;
+      }
+    }
+  }
+  @if $type == pc {
+    a {
+      width: 475px;
+    }
+  }
+  @if $type == sp {
+    a {
+      font-size: 2.5rem;
+      padding: 23px 0;
+    }
+  }
+}
+
+//===========================================
+//  SCHOOL
+//===========================================
+
+.school__top {
+  margin: 110px 0 0;
+  @if $type == sp {
+    margin: 60px 0 0;
+  }
+}
+
+.school__catch {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-bottom: 110px;
+  text-align: center;
+  color: $c_base;
+  @if $type == sp {
+    font-size: 2.3rem;
+    margin-bottom: 46px;
+  }
+}
+
+.school__list {
+  margin: auto;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+  iframe {
+    display: block;
+  }
+  @if $type == pc {
+    width: 800px;
+  }
+  @if $type == sp {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+
+.school__list__video {
+  width: 100%;
+  @if $type == sp {
+    max-height: 172px;
+  }
+}
+
+.school__list__btn {
+  a {
+    font-family: $ff_eng;
+    font-size: 4rem;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    background-color: $c_base;
+
+    justify-content: center;
+    align-items: center;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      display: block;
+      width: 21px;
+      height: 5px;
+      margin: auto;
+      content: '';
+      transition: 0.3s;
+      background-image: url('../images/common/arrow.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      &::before {
+        right: 15px;
+      }
+    }
+  }
+  @if $type == sp {
+    a {
+      font-size: 2.5rem;
+      height: 80px;
+      &::before {
+        top: unset;
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.school__second {
+  margin: 120px 0 345px;
+  @if $type == sp {
+    margin: 68px 0 57px;
+  }
+}
+
+.school__second__mv {
+  margin-bottom: 130px;
+  @if $type == pc {
+    position: relative;
+    display: flex;
+    height: 400px;
+
+    align-items: center;
+  }
+  @if $type == sp {
+    margin-bottom: 50px;
+  }
+}
+
+.school__second__mv__ttl {
+  font-family: $ff_eng;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1.125;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.05em;
+  color: $c_base;
+  @if $type == sp {
+    font-size: 4rem;
+    display: table;
+    margin: 0 auto 40px;
+  }
+}
+
+.school__second__mv__img {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  @if $type == pc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 0;
+    width: 580px;
+  }
+}
+
+.school__contents {
+  h2 {
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1.8;
+    margin-bottom: 56px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    span {
+      padding: 0 0.5em;
+      color: #ffffff;
+      background-color: $c_base;
+    }
+    + p {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 2.8;
+      margin-bottom: 115px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: $c_base;
+    }
+  }
+  h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 90px auto 32px;
+    padding: 6px 0;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $c_base;
+    border: 1px solid $c_base;
+  }
+  h4 {
+    font-size: 2.5rem;
+    position: relative;
+    display: table;
+    margin: auto;
+    letter-spacing: 0.02em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background-color: #707070;
+    }
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 2.222222;
+    letter-spacing: 0.02em;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  ul {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 2.272727272727273;
+    margin: auto;
+  }
+  @if $type == pc {
+    h3 {
+      width: 500px;
+    }
+    h4 {
+      &:nth-of-type(1) {
+        margin-top: 55px;
+      }
+    }
+    ul {
+      display: table;
+    }
+  }
+  @if $type == sp {
+    h2 {
+      font-size: 2.5rem;
+      span {
+        padding: 0 0.2em;
+      }
+      + p {
+        font-size: 1.6rem;
+      }
+    }
+    h3 {
+      font-size: 1.7rem;
+      margin: 40px 0 29px;
+    }
+    h4 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+    ul {
+      font-size: 1.7rem;
+      line-height: 2.352941176470588;
+    }
+  }
+}
+
+.school__contents__btn {
+  margin-top: 100px;
+  @if $type == sp {
+    margin-top: 45px;
+  }
+}
+
+//===========================================
+//  BOOKS
+//===========================================
+
+.books__contents {
+  margin: 110px 0 320px;
+  @if $type == sp {
+    margin: 60px 0 160px;
+  }
+}
+
+.books__ttl {
+  font-size: 5rem;
+  line-height: 1.8;
+  margin-bottom: 108px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $c_base;
+  @if $type == sp {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    margin-bottom: 47px;
+  }
+}
+
+.books__list {
+  margin: auto;
+}
+
+.books__list__item {
+  padding: 0 38px 80px;
+  border-bottom: 1px solid #707070;
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  @if $type == pc {
+    display: flex;
+  }
+  @if $type == sp {
+    padding: 0 0 50px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.books__list__img {
+  max-width: 191px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  @if $type == pc {
+    margin-right: 53px;
+  }
+  @if $type == sp {
+    margin: 0 auto 27px;
+  }
+}
+
+.books__list__txt {
+  time {
+    font-size: 1.4rem;
+    line-height: 1.428571428571429;
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+  > p {
+    font-size: 1.5rem;
+    line-height: 2;
+    letter-spacing: 0.02em;
+  }
+  @if $type == pc {
+    display: flex;
+
+    flex: 1;
+    flex-flow: column;
+  }
+}
+
+.books__list__ttl {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 13px;
+  letter-spacing: 0.05em;
+  color: $c_base;
+  @if $type == sp {
+    margin-bottom: 6px;
+  }
+}
+
+.books__list__data {
+  font-size: 1.4rem;
+  line-height: 1.428571428571429;
+  display: flex;
+  margin-bottom: 15px;
+  letter-spacing: 0.03em;
+
+  flex-flow: wrap;
+  @if $type == pc {
+    li {
+      margin-right: 1em;
+    }
+  }
+  @if $type == sp {
+    line-height: 1.785714285714286;
+    margin-bottom: 6px;
+    li {
+      &:first-child {
+        width: 100%;
+      }
+      &:not(:first-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.books__list__btn {
+  @if $type == pc {
+    margin: auto 0 0 auto;
+  }
+  @if $type == sp {
+    margin-top: 40px;
+  }
+}
+

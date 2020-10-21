@@ -1,0 +1,79 @@
+.pc {
+  @if $type == sp {
+    display: none;
+  }
+}
+
+.sp {
+  margin-top: 20px;
+  @if $type == pc {
+    display: none;
+  }
+}
+
+.present {
+  img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.mv {
+  min-height: 929px;
+
+  object-fit: cover;
+}
+
+.vida {
+  min-height: 1104px;
+
+  object-fit: cover;
+}
+
+.entry {
+  position: relative;
+}
+
+.entry__img {
+  max-width: 2000px;
+  height: 1290px;
+
+  object-fit: cover;
+}
+
+.entry__btn {
+  position: absolute;
+  top: 1050px;
+  right: 0;
+  left: 0;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  img {
+    display: block;
+    width: 525px;
+  }
+}
+
+.follow__btn {
+  position: absolute;
+  top: 370px;
+  left: calc(50% + 130px);
+  width: 316px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  img {
+    display: block;
+  }
+}
+
+.info {
+  max-width: 2000px;
+  height: 1520px;
+
+  object-fit: cover;
+}
