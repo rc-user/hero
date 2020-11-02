@@ -778,10 +778,11 @@
   }
   .contact__contents {
     margin: 100px 0 200px;
+    margin: 50px 0 100px;
   }
   .contact__ttl {
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 
@@ -1558,7 +1559,8 @@
     margin: 100px 0 200px;
   }
   .contact__ttl {
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
+    font-size: 2rem;
   }
 }

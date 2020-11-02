@@ -1087,9 +1087,15 @@
 
 .contact__contents {
   margin: 100px 0 200px;
+  @if $type == sp {
+    margin: 50px 0 100px;
+  }
 }
 
 .contact__ttl {
-  text-align: center;
   margin-bottom: 50px;
+  text-align: center;
+  @if $type == pc {
+    font-size: 2rem;
+  }
 }
