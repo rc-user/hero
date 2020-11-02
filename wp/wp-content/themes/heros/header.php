@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#fff">
   <title>
-    <?php if( is_front_page() && is_home() ): ?>
+    <?php if( is_page('front')): ?>
       <?php bloginfo( 'description' ); ?> | <?php blogInfo('name'); ?>
     <?php elseif( is_archive() ):?>
       <?php echo esc_html(get_post_type_object(get_post_type())->label); ?> | <?php bloginfo( 'description' ); ?> | <?php blogInfo('name'); ?>
@@ -23,10 +23,12 @@
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/drawer.css" />
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/common.css" />
 
-  <?php if( is_front_page() && is_home() ): ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/front.css" />
+  <?php if( is_page('front')): ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/slick.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/front.css" />
   <?php else: ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/second.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/second.css" />
   <?php endif; ?>
 </head>
 
@@ -80,7 +82,7 @@
 
     <nav class="drawer-nav">
       <div class="drawer-nav__logo"></div>
-      <ul class="drawer-menu scroll-link">
+      <ul class="drawer-menu">
         <li><a href="<?php echo esc_url( home_url( '/seminar/' ) ); ?>">SEMINAR</a></li>
         <li><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">NEWS</a></li>
         <li><a href="<?php echo esc_url( home_url( '/concept/' ) ); ?>">CONCEPT</a></li>

@@ -206,6 +206,10 @@ table {
     margin-right: auto;
     margin-left: auto;
   }
+  .common-btn--large a {
+    height: 70px;
+    font-weight: bold;
+  }
   .common-btn--reverse a {
     color: #D93915;
     background-color: #ffffff;
@@ -754,6 +758,14 @@ table {
   .common-btn--center a {
     margin-right: auto;
     margin-left: auto;
+  }
+  .common-btn--large a {
+    height: 70px;
+    font-weight: bold;
+  }
+  .common-btn--large a {
+    font-size: 2rem;
+    width: 350px;
   }
   .common-btn--reverse a {
     color: #D93915;

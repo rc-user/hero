@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: TRAINER下層ページ用
-*/
-?>
-
 <?php get_header(); ?>
 
 <main id="main">
@@ -11,14 +5,14 @@ Template Name: TRAINER下層ページ用
     <section class="second__mv">
       <div class="second__mv__ttl">
         <?php
-          $parent_id = $post->post_parent; //親ページのIDを取得
-          echo get_post($parent_id)->post_title; //タイトル
+        $parent_id = $post->post_parent; //親ページのIDを取得
+        echo get_post($parent_id)->post_title; //タイトル
         ?>
       </div>
       <div class="second__mv__img">
         <?php
-          $parent_id = $post->post_parent; //親ページのIDを取得
-          echo get_the_post_thumbnail($parent_id);
+        $parent_id = $post->post_parent; //親ページのIDを取得
+        echo get_the_post_thumbnail($parent_id);
         ?>
       </div>
     </section>
@@ -52,7 +46,7 @@ Template Name: TRAINER下層ページ用
           <h2>日常のアウトプットで高める</h2>
           <p>ペップトークは何も勇気づけるための限定的なものではありません。日常生活で説得をする場面、ビジネスでの提案の機会、自分の子供や部下を動かすマネジメント様々な場面で人を動かし前にすすめることができる技術です。共に学習し、アウトプットし、体現していく。そのような支援をしていきたいのです。</p>
 
-          <iframe class="traniner__contents__movie" width="800" height="460" src="https://www.youtube.com/embed/reIVDupU7vc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="traniner__contents__movie" width="800" height="460" src="<?php the_field('movie_url'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!-- /.traniner__contents -->
       </div>
@@ -63,36 +57,62 @@ Template Name: TRAINER下層ページ用
 
         <div class="wrap">
           <ul class="seminar-list">
-            <li class="seminar-list__item seminar-list__item--new">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
-                <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
-                </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
-              </a>
-            </li>
-            <li class="seminar-list__item seminar-list__item--new">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
-                <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
-                </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
-              </a>
-            </li>
-            <li class="seminar-list__item seminar-list__item--entry">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
-                <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
-                </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
-              </a>
-            </li>
+            <?php global $post;
+            $label = array('new', 'entry');
+            $args = array(
+              'posts_per_page' => 3, //記事数
+              'post_status' => 'publish', //公開記事のみ
+              'post_type' => 'post-seminar',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'taxonomy-seminar', //タクソノミーを指定
+                  'field' => 'slug', //ターム名をスラッグで指定する
+                  'terms' => 'iwasaki', //表示したいタームをスラッグで指定
+                  'operator' => 'IN'
+                ),
+              ),
+              'meta_key' => 'label',
+              'meta_value' => $label
+            );
+            $myposts = get_posts($args);
+            if ($myposts) : foreach ($myposts  as $post) : setup_postdata($post);
+            ?>
+                <li class="seminar-list__item <?php
+                                              $label = get_field('label');
+                                              if ($label == 'new') { ?>
+                  seminar-list__item--new
+                <?php } elseif ($label == 'entry') { ?>
+                  seminar-list__item--entry
+                <?php } elseif ($label == 'end') { ?>
+                  seminar-list__item--end
+                <?php } else { ?>
+                <?php } ?>">
+
+                  <a href="<?php the_field('url'); ?>" target="_blank">
+                    <h3 class="seminar-list__ttl"><?php the_title(); ?></h3>
+                    <div class="seminar-list__img">
+                      <?php the_post_thumbnail('full'); ?>
+                    </div>
+                    <p>
+                      <?php
+                      if (mb_strlen(get_the_excerpt()) > 37) {
+                        $title = mb_substr(get_the_excerpt(), 0, 37);
+                        echo $title . '…';
+                      } else {
+                        echo get_the_excerpt();
+                      }
+                      ?>
+                    </p>
+
+                    <time class="seminar-list__time"><?php the_field('day'); ?> <?php the_field('time'); ?></time>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+            <?php else : ?>
+            <?php wp_reset_postdata();
+            endif; ?>
           </ul>
         </div>
         <!-- /.wrap -->
@@ -101,7 +121,7 @@ Template Name: TRAINER下層ページ用
 
       <div class="wrap">
         <div class="traniner__second__btn">
-          <a href="<?php echo esc_url( home_url( '/school/spellbinder-school/' ) ); ?>">実践型スクールの<br>ご紹介はこちら</a>
+          <a href="<?php echo esc_url(home_url('/school/spellbinder-school/')); ?>">実践型スクールの<br>ご紹介はこちら</a>
         </div>
         <!-- /.traniner__contents__btn -->
       </div>

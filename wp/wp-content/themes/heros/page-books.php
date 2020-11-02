@@ -16,156 +16,67 @@
         <h2 class="books__ttl">ダウンロード<br class="sp">可能資料一覧</h2>
 
         <ul class="books__list">
+          <?php global $post;
+            $args = array( 
+              'posts_per_page' => 100, //記事数
+              'post_status' => 'publish', //公開記事のみ
+              'post_type' => 'post-books',
+              'orderby' => 'date',
+              'order' => 'DESC'
+              );
+              $myposts = get_posts( $args );
+              if($myposts ) : foreach( $myposts  as $post ) : setup_postdata($post);
+          ?>
+
           <li class="books__list__item">
             <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
+              <?php the_post_thumbnail('full'); ?>
             </div>
             <!-- /.books__list__img -->
             
             <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
+              <?php if(get_field('release')): ?>
+                <time><?php the_field('release'); ?></time>
+              <?php endif; ?>
+
               <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
+                <?php the_title(); ?>
               </h3>
               <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
+                <?php if(get_field('author')): ?>
+                  <li><?php the_field('author'); ?> 著</li>
+                <?php endif; ?>
 
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
+                <?php if(get_field('price')): ?>
+                  <li>定価：<?php
+                    if(get_post_meta($post->ID , 'price' ,true)):
+                    $num = get_post_meta($post->ID , 'price' ,true);
+                    echo number_format( $num ) ;
+                    endif; ?>円＋税</li>
+                <?php endif; ?>
+
+                <?php if(get_field('publisher')): ?>
+                  <li>出版：<?php the_field('publisher'); ?></li>
+                <?php endif; ?>
+              </ul>
+              
+              <?php the_content(); ?>
+
+              <?php if(get_field('btn_url')): ?>
+                <div class="books__list__btn common-btn common-btn--dark">
+                  <a href="<?php the_field('btn_url'); ?>" target="<?php
+                $select = get_field('window');
+                if ($select == 'true') { ?>_blank<?php } else { ?>_parent<?php } ?>"><?php the_field('btn_name'); ?></a>
+                </div>
+                <!-- /.books__list__btn -->
+              <?php endif; ?>
             </div>
             <!-- /.books__list__txt -->
           </li>
-          <li class="books__list__item">
-            <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
-            </div>
-            <!-- /.books__list__img -->
-            
-            <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
-              <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
-              </h3>
-              <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
 
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
-            </div>
-            <!-- /.books__list__txt -->
-          </li>
-          <li class="books__list__item">
-            <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
-            </div>
-            <!-- /.books__list__img -->
-            
-            <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
-              <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
-              </h3>
-              <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
-
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
-            </div>
-            <!-- /.books__list__txt -->
-          </li>
-          <li class="books__list__item">
-            <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
-            </div>
-            <!-- /.books__list__img -->
-            
-            <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
-              <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
-              </h3>
-              <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
-
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
-            </div>
-            <!-- /.books__list__txt -->
-          </li>
-          <li class="books__list__item">
-            <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
-            </div>
-            <!-- /.books__list__img -->
-            
-            <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
-              <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
-              </h3>
-              <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
-
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
-            </div>
-            <!-- /.books__list__txt -->
-          </li>
-          <li class="books__list__item">
-            <div class="books__list__img">
-              <img src="https://placehold.jp/191x275.png" alt="">
-            </div>
-            <!-- /.books__list__img -->
-            
-            <div class="books__list__txt">
-              <time>2020年9月10日発売</time>
-              <h3 class="books__list__ttl">
-                書籍タイトル書籍タイトル書籍タイトル書籍タイトル
-              </h3>
-              <ul class="books__list__data">
-                <li>岩﨑由純 著</li>
-                <li>定価：1,000円＋税</li>
-                <li>出版：集英社</li>
-              </ul>
-              <p>ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。</p>
-
-              <div class="books__list__btn common-btn common-btn--dark">
-                <a href="#">amazonで購入する</a>
-              </div>
-              <!-- /.books__list__btn -->
-            </div>
-            <!-- /.books__list__txt -->
-          </li>
+          <?php endforeach; ?>
+          <?php else : ?>
+          <?php wp_reset_postdata(); endif; ?>
         </ul>
       </section>
     </div>

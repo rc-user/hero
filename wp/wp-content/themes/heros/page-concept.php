@@ -42,8 +42,8 @@
                 <!-- /.concept__trainer__list__txt -->
                 
                 <ul class="concept__trainer__list__btn">
-                  <li class="common-btn"><a href="#">PROFILE</a></li>
-                  <li class="common-btn"><a href="#">MISSION SCHOOL</a></li>
+                  <li class="common-btn common-btn--large"><a href="<?php echo esc_url( home_url( '/trainer/hisayoshi-yoshitake/' ) ); ?>">PROFILE</a></li>
+                  <li class="common-btn common-btn--large"><a href="<?php echo esc_url( home_url( '/school/mission-school/' ) ); ?>">MISSION SCHOOL</a></li>
                 </ul>
               </div>
               <!-- /.concept__trainer__list__flex -->
@@ -63,8 +63,8 @@
                 <!-- /.concept__trainer__list__txt -->
                 
                 <ul class="concept__trainer__list__btn">
-                  <li class="common-btn"><a href="#">PROFILE</a></li>
-                  <li class="common-btn"><a href="#">SPELLBINDER SCHOOL</a></li>
+                  <li class="common-btn common-btn--large"><a href="<?php echo esc_url( home_url( '/trainer/yoshizumi-iwasaki/' ) ); ?>">PROFILE</a></li>
+                  <li class="common-btn common-btn--large"><a href="<?php echo esc_url( home_url( '/school/spellbinder-school/' ) ); ?>">SPELLBINDER SCHOOL</a></li>
                 </ul>
               </div>
               <!-- /.concept__trainer__list__flex -->

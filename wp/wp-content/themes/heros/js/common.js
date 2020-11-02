@@ -14,8 +14,12 @@ $(function () {
   //メガメニュー
   $('.mega-trigger').mouseover(function () {
     $(this).addClass('active');
+    $('.mv').addClass('active');
+    $('.second__mv').addClass('active');
   }).mouseout(function () {
     $(this).removeClass('active');
+    $('.mv').removeClass('active');
+    $('.second__mv').removeClass('active');
   });
 
   // スクロールアニメーション

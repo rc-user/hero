@@ -93,6 +93,19 @@ br {
   }
 }
 
+.common-btn--large {
+  a {
+    height: 70px;
+    font-weight: bold;
+  }
+  @if $type == pc {
+    a {
+      font-size: 2rem;
+      width: 350px;
+    }
+  }
+}
+
 .common-btn--reverse {
   a {
     color: $c_base;

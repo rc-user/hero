@@ -1,5 +1,26 @@
 .mv {
+  position: relative;
   margin-bottom: 93px;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  &.active {
+    &::before {
+      opacity: 0.7;
+    }
+  }
   img {
     display: block;
     width: 100%;
@@ -21,6 +42,10 @@
     margin: 0 0 26px;
     text-align: center;
   }
+}
+
+.front-ttl--white {
+  color: #ffffff;
 }
 
 .front-ttl--center {
@@ -103,11 +128,11 @@
 .news__list {
   margin-bottom: 40px;
   li {
-    background-color: #ffffff;
     display: block;
     box-sizing: border-box;
     min-height: 150px;
     padding: 16px 19px;
+    background-color: #ffffff;
   }
   time {
     font-family: $ff_eng;
@@ -388,13 +413,11 @@
   margin-bottom: 34px;
 
   flex-flow: wrap;
-  a {
-    display: block;
-    &:hover {
-      img {
-        opacity: 0.7;
-      }
-    }
+  figure {
+    display: flex;
+    height: 100%;
+
+    flex-flow: column;
   }
   img {
     display: block;
@@ -405,12 +428,16 @@
   }
   figcaption {
     font-size: 1.3rem;
+    margin-top: 10px;
   }
   @if $type == pc {
     justify-content: center;
     li {
       width: 132px;
       margin: 0 40px;
+    }
+    figcaption {
+      min-height: 3.2em;
     }
   }
   @if $type == sp {
@@ -474,16 +501,17 @@
 }
 
 .youtube__list__movie {
+  position: relative;
+  width: 100%;
+  height: 0;
   margin-bottom: 6px;
-  background-color: #ffffff;
-  img {
-    display: block;
+  padding-top: 53.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    transition: 0.3s;
-    a:hover & {
-      opacity: 0.7;
-    }
+    height: 100%;
   }
 }
 

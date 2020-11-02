@@ -1,9 +1,9 @@
 $(function () {
   // スライダー
-  $('.archive__slick').slick({
-    arrows: true,
+  $('.mv').slick({
+    arrows: false,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
@@ -12,7 +12,7 @@ $(function () {
     cssEase: 'ease',
     responsive: [
       {
-        breakpoint: 1140,
+        breakpoint: 1024,
         settings: {
           speed: 200,
           centerMode: false,

@@ -1,5 +1,27 @@
 @charset "UTF-8";
 @media screen and (max-width: 1024px) {
+  .second__mv {
+    position: relative;
+  }
+  .second__mv::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  .second__mv.active::before {
+    opacity: 0.7;
+  }
   .second__mv__ttl {
     font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
     font-size: 7rem;
@@ -47,8 +69,19 @@
     background-color: #ffffff;
   }
   .seminar-list__item a {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
     padding: 10px 25px 28px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
   }
   .seminar-list__item a::before {
     font-size: 1.4rem;
@@ -76,6 +109,7 @@
   .seminar-list__item p {
     font-size: 1.4rem;
     line-height: 1.428571428571429;
+    margin-bottom: 10px;
     letter-spacing: 0.03em;
   }
   .seminar-list__item:not(:last-child) {
@@ -124,7 +158,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    margin-top: 10px;
+    margin-top: auto;
     letter-spacing: 0.15em;
   }
   .seminar-list__time::before {
@@ -742,15 +776,42 @@
   .books__list__btn {
     margin-top: 40px;
   }
+  .contact__contents {
+    margin: 100px 0 200px;
+  }
+  .contact__ttl {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 
 @media print, screen and (min-width: 1025px) {
   .second__mv {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     height: 400px;
+  }
+  .second__mv::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  .second__mv.active::before {
+    opacity: 0.7;
   }
   .second__mv__ttl {
     font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
@@ -805,8 +866,19 @@
     width: calc((100% - 50px * 2) / 3);
   }
   .seminar-list__item a {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
     padding: 10px 25px 28px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
   }
   .seminar-list__item a::before {
     font-size: 1.4rem;
@@ -834,6 +906,7 @@
   .seminar-list__item p {
     font-size: 1.4rem;
     line-height: 1.428571428571429;
+    margin-bottom: 10px;
     letter-spacing: 0.03em;
   }
   .seminar-list__item:not(:nth-of-type(3n)) {
@@ -859,6 +932,7 @@
     line-height: 1.333333333333333;
     margin-bottom: 24px;
     letter-spacing: 0.05em;
+    min-height: 2.5em;
   }
   .seminar-list__img {
     margin-bottom: 16px;
@@ -882,7 +956,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    margin-top: 10px;
+    margin-top: auto;
     letter-spacing: 0.15em;
   }
   .seminar-list__time::before {
@@ -1418,7 +1492,7 @@
     margin-bottom: 80px;
   }
   .books__list__img {
-    max-width: 191px;
+    width: 191px;
     margin-right: 53px;
   }
   .books__list__img img {
@@ -1479,5 +1553,12 @@
   }
   .books__list__btn {
     margin: auto 0 0 auto;
+  }
+  .contact__contents {
+    margin: 100px 0 200px;
+  }
+  .contact__ttl {
+    text-align: center;
+    margin-bottom: 50px;
   }
 }

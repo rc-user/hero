@@ -1,4 +1,25 @@
 .second__mv {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  &.active {
+    &::before {
+      opacity: 0.7;
+    }
+  }
   @if $type == pc {
     display: flex;
     height: 400px;
@@ -55,8 +76,12 @@
 .seminar-list__item {
   background-color: #ffffff;
   a {
-    display: block;
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
     padding: 10px 25px 28px;
+
+    flex-flow: column;
     &::before {
       font-size: 1.4rem;
       font-weight: bold;
@@ -76,6 +101,7 @@
   p {
     font-size: 1.4rem;
     line-height: 1.428571428571429;
+    margin-bottom: 10px;
     letter-spacing: 0.03em;
   }
   @if $type == pc {
@@ -131,6 +157,9 @@
   line-height: 1.333333333333333;
   margin-bottom: 24px;
   letter-spacing: 0.05em;
+  @if $type == pc {
+    min-height: 2.5em;
+  }
 }
 
 .seminar-list__img {
@@ -152,7 +181,7 @@
   font-weight: bold;
   display: flex;
   width: 100%;
-  margin-top: 10px;
+  margin-top: auto;
   letter-spacing: 0.15em;
   &::before {
     margin-right: auto;
@@ -968,7 +997,6 @@
 }
 
 .books__list__img {
-  max-width: 191px;
   img {
     display: block;
     width: 100%;
@@ -976,9 +1004,11 @@
     margin: auto;
   }
   @if $type == pc {
+    width: 191px;
     margin-right: 53px;
   }
   @if $type == sp {
+    max-width: 191px;
     margin: 0 auto 27px;
   }
 }
@@ -1051,3 +1081,15 @@
   }
 }
 
+//===========================================
+//  CONTACT
+//===========================================
+
+.contact__contents {
+  margin: 100px 0 200px;
+}
+
+.contact__ttl {
+  text-align: center;
+  margin-bottom: 50px;
+}

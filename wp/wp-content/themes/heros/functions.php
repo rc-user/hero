@@ -21,9 +21,9 @@ function add_files() {
   wp_enqueue_script('iscroll','//cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js', array( 'jquery' ), '20201007', false);
   wp_enqueue_script( 'drawer', get_template_directory_uri() . '/js/lib/drawer.min.js', array( 'jquery' ), '20201007', false );
   wp_enqueue_script( 'script', get_template_directory_uri() . '/js/common.js', array( 'jquery' ), '20200611', false );
-  // archiveページ専用
-  if ( is_archive() ) wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/lib/slick.js', array( 'jquery' ), '20200830', false );
-  if ( is_archive() ) wp_enqueue_script( 'archive', get_template_directory_uri() . '/js/archive.js', array( 'jquery' ), '20200830', false );
+  // TOPページ専用
+  if ( is_page('front') ) wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/lib/slick.js', array( 'jquery' ), '20200830', false );
+  if ( is_page('front') ) wp_enqueue_script( 'front', get_template_directory_uri() . '/js/front.js', array( 'jquery' ), '20200830', false );
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
 

@@ -1,8 +1,28 @@
 @charset "UTF-8";
 @media screen and (max-width: 1024px) {
   .mv {
+    position: relative;
     margin-bottom: 93px;
     margin-bottom: 26px;
+  }
+  .mv::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  .mv.active::before {
+    opacity: 0.7;
   }
   .mv img {
     display: block;
@@ -18,6 +38,9 @@
     color: #D93915;
     margin: 0 0 26px;
     text-align: center;
+  }
+  .front-ttl--white {
+    color: #ffffff;
   }
   .front-ttl--center {
     text-align: center;
@@ -67,12 +90,12 @@
     margin-bottom: 30px;
   }
   .news__list li {
-    background-color: #ffffff;
     display: block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 150px;
     padding: 16px 19px;
+    background-color: #ffffff;
   }
   .news__list time {
     font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
@@ -247,11 +270,17 @@
     -ms-flex-flow: wrap;
     flex-flow: wrap;
   }
-  .books__list a {
-    display: block;
-  }
-  .books__list a:hover img {
-    opacity: 0.7;
+  .books__list figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
   }
   .books__list img {
     display: block;
@@ -263,6 +292,7 @@
   }
   .books__list figcaption {
     font-size: 1.3rem;
+    margin-top: 10px;
   }
   .books__list li {
     width: calc((100% - 10vw) / 2);
@@ -293,18 +323,18 @@
     margin-bottom: 30px;
   }
   .youtube__list__movie {
-    margin-bottom: 6px;
-    background-color: #ffffff;
-  }
-  .youtube__list__movie img {
-    display: block;
+    position: relative;
     width: 100%;
-    height: auto;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    height: 0;
+    margin-bottom: 6px;
+    padding-top: 53.25%;
   }
-  a:hover .youtube__list__movie img {
-    opacity: 0.7;
+  .youtube__list__movie iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .youtube__list__ttl {
     font-size: 2rem;
@@ -319,7 +349,27 @@
 
 @media print, screen and (min-width: 1025px) {
   .mv {
+    position: relative;
     margin-bottom: 93px;
+  }
+  .mv::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    content: '';
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000000;
+  }
+  .mv.active::before {
+    opacity: 0.7;
   }
   .mv img {
     display: block;
@@ -333,6 +383,9 @@
     font-weight: 500;
     margin: 0 0 30px;
     color: #D93915;
+  }
+  .front-ttl--white {
+    color: #ffffff;
   }
   .front-ttl--center {
     text-align: center;
@@ -398,12 +451,12 @@
     flex-flow: wrap;
   }
   .news__list li {
-    background-color: #ffffff;
     display: block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 150px;
     padding: 16px 19px;
+    background-color: #ffffff;
   }
   .news__list time {
     font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
@@ -634,11 +687,17 @@
     -ms-flex-pack: center;
     justify-content: center;
   }
-  .books__list a {
-    display: block;
-  }
-  .books__list a:hover img {
-    opacity: 0.7;
+  .books__list figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
   }
   .books__list img {
     display: block;
@@ -650,10 +709,14 @@
   }
   .books__list figcaption {
     font-size: 1.3rem;
+    margin-top: 10px;
   }
   .books__list li {
     width: 132px;
     margin: 0 40px;
+  }
+  .books__list figcaption {
+    min-height: 3.2em;
   }
   .youtube {
     margin-bottom: 119px;
@@ -688,18 +751,18 @@
     margin-top: 60px;
   }
   .youtube__list__movie {
-    margin-bottom: 6px;
-    background-color: #ffffff;
-  }
-  .youtube__list__movie img {
-    display: block;
+    position: relative;
     width: 100%;
-    height: auto;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    height: 0;
+    margin-bottom: 6px;
+    padding-top: 53.25%;
   }
-  a:hover .youtube__list__movie img {
-    opacity: 0.7;
+  .youtube__list__movie iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .youtube__list__ttl {
     font-size: 2rem;

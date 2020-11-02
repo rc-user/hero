@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: TRAINER下層ページ用
-*/
-?>
-
 <?php get_header(); ?>
 
 <main id="main">
@@ -52,7 +46,7 @@ Template Name: TRAINER下層ページ用
           <h2>併走するパートナーとして</h2>
           <p>あなたの今の「好きで得意」は過去の人生のどこから来るのでしょうか。あなたは何故存在し、今まさにどのような価値を秘めているのかそして見つけた価値を強みにしてどのように想いのまま表現するのか、一人で気づき深めることが難しいからこそパートナーやメンターの存在が重要です。ミッショントレーナーはそのようなあなたのパートナーとして、最大限あなたの価値を引き出し、高め続けます。</p>
 
-          <iframe class="traniner__contents__movie" width="800" height="460" src="https://www.youtube.com/embed/AM34dqFxjDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="traniner__contents__movie" width="800" height="460" src="<?php the_field('movie_url'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!-- /.traniner__contents -->
       </div>
@@ -63,36 +57,61 @@ Template Name: TRAINER下層ページ用
 
         <div class="wrap">
           <ul class="seminar-list">
-            <li class="seminar-list__item seminar-list__item--new">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
+            <?php global $post;
+            $label = array('new', 'entry');
+            $args = array( 
+              'posts_per_page' => 3, //記事数
+              'post_status' => 'publish', //公開記事のみ
+              'post_type' => 'post-seminar',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'tax_query' => array(
+                  array(
+                      'taxonomy' => 'taxonomy-seminar', //タクソノミーを指定
+                      'field' => 'slug', //ターム名をスラッグで指定する
+                      'terms' => 'yoshitake', //表示したいタームをスラッグで指定
+                      'operator' => 'IN'
+                  ),
+                ),
+                'meta_key' => 'label',
+                'meta_value' => $label
+              );
+              $myposts = get_posts( $args );
+              if($myposts ) : foreach( $myposts  as $post ) : setup_postdata($post);
+            ?>
+            <li class="seminar-list__item <?php
+                $like_fruits = get_field('label');
+                if ($like_fruits == 'new') { ?>
+                  seminar-list__item--new
+                <?php } elseif ($like_fruits == 'entry') { ?>
+                  seminar-list__item--entry
+                <?php } elseif ($like_fruits == 'end') { ?>
+                  seminar-list__item--end
+                <?php } else { ?>
+                <?php } ?>">
+
+              <a href="<?php the_field('url'); ?>" target="_blank">
+                <h3 class="seminar-list__ttl"><?php the_title(); ?></h3>
                 <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
+                  <?php the_post_thumbnail('full'); ?>
                 </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
+                <p>
+                  <?php
+                  if(mb_strlen(get_the_excerpt())>37) {
+                    $title= mb_substr(get_the_excerpt(),0,37) ;
+                      echo $title . '…';
+                    } else {
+                      echo get_the_excerpt();
+                    }
+                  ?>
+                </p>
+
+                <time class="seminar-list__time"><?php the_field('day'); ?> <?php the_field('time'); ?></time>
               </a>
             </li>
-            <li class="seminar-list__item seminar-list__item--new">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
-                <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
-                </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
-              </a>
-            </li>
-            <li class="seminar-list__item seminar-list__item--entry">
-              <a href="#">
-                <h3 class="seminar-list__ttl">ここにセミナータイトルがはいります</h3>
-                <div class="seminar-list__img">
-                  <img src="https://placehold.jp/250x130.png" alt="">
-                </div>
-                <p>ここにテキストがはいります。ここにテキストがはいります。はいります…</p>
-                <time class="seminar-list__time">2020.09.09 18:00</time>
-              </a>
-            </li>
+            <?php endforeach; ?>
+            <?php else : ?>
+            <?php wp_reset_postdata(); endif; ?>
           </ul>
         </div>
         <!-- /.wrap -->

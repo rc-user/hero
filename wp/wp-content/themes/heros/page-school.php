@@ -17,7 +17,7 @@
 
         <ul class="school__list">
           <li>
-            <iframe class="school__list__video" width="800" height="460" src="https://www.youtube.com/embed/AM34dqFxjDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="school__list__video" width="800" height="460" src="<?php the_field('yoshitake'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             <div class="school__list__btn">
               <a href="<?php echo esc_url( home_url( '/school/mission-school' ) ); ?>">MISSION <br class="sp">SCHOOL</a>
@@ -25,7 +25,7 @@
             <!-- /.school__list__btn -->
           </li>
           <li>
-            <iframe class="school__list__video" width="800" height="460" src="https://www.youtube.com/embed/reIVDupU7vc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="school__list__video" width="800" height="460" src="<?php the_field('iwasaki'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="school__list__btn">
               <a href="<?php echo esc_url( home_url( '/school/spellbinder-school' ) ); ?>">SPELLBINDER <br class="sp">SCHOOL</a>
             </div>
