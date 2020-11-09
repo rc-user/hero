@@ -2,16 +2,35 @@
 <html>
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WT44WK5');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#fff">
   <title>
-    <?php if( is_page('front')): ?>
-      <?php bloginfo( 'description' ); ?> | <?php blogInfo('name'); ?>
-    <?php elseif( is_archive() ):?>
-      <?php echo esc_html(get_post_type_object(get_post_type())->label); ?> | <?php bloginfo( 'description' ); ?> | <?php blogInfo('name'); ?>
-    <?php else: ?>
-      <?php the_title(); ?> | <?php bloginfo( 'description' ); ?> | <?php blogInfo('name'); ?>
+    <?php if (is_page('front')) : ?>
+      <?php bloginfo('description'); ?> | <?php blogInfo('name'); ?>
+    <?php elseif (is_archive()) : ?>
+      <?php echo esc_html(get_post_type_object(get_post_type())->label); ?> | <?php bloginfo('description'); ?> | <?php blogInfo('name'); ?>
+    <?php else : ?>
+      <?php the_title(); ?> | <?php bloginfo('description'); ?> | <?php blogInfo('name'); ?>
     <?php endif; ?>
   </title>
   <meta name="keywords" content="" />
@@ -23,55 +42,59 @@
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/drawer.css" />
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/common.css" />
 
-  <?php if( is_page('front')): ?>
+  <?php if (is_page('front')) : ?>
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/slick.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lib/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/front.css" />
-  <?php else: ?>
+  <?php else : ?>
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/second.css" />
   <?php endif; ?>
 </head>
 
 <body id="body" <?php body_class('drawer drawer--right'); ?>>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT44WK5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <?php wp_body_open(); ?>
 
   <header id="header">
-    <?php if( is_front_page() && is_home() ): ?>
-    <h1 class="header__logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/logo.png" alt="ザ・ヒーロートレーニング"></a></h1>
-    <?php else: ?>
-    <div class="header__logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/logo.png" alt="ザ・ヒーロートレーニング"></a></div>
+    <?php if (is_front_page() && is_home()) : ?>
+      <h1 class="header__logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/logo.png" alt="ザ・ヒーロートレーニング"></a></h1>
+    <?php else : ?>
+      <div class="header__logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/logo.png" alt="ザ・ヒーロートレーニング"></a></div>
     <?php endif; ?>
 
     <nav id="global-nav">
       <ul class="global-nav__list">
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/seminar/' ) ); ?>"><span>SEMINAR</span></a>
+          <a href="<?php echo esc_url(home_url('/seminar/')); ?>"><span>SEMINAR</span></a>
         </li>
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/news/' ) ); ?>"><span>NEWS</span></a>
+          <a href="<?php echo esc_url(home_url('/news/')); ?>"><span>NEWS</span></a>
         </li>
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/concept/' ) ); ?>"><span>CONCEPT</span></a>
+          <a href="<?php echo esc_url(home_url('/concept/')); ?>"><span>CONCEPT</span></a>
         </li>
         <li class="global-nav__list__item mega-trigger">
           <a href="#"><span>TRAINER</span></a>
           <div class="mega-menu">
             <h3 class="mega-menu__ttl">TRAINER</h3>
             <ul class="mega-menu__list">
-              <li><a href="<?php echo esc_url( home_url( '/trainer/hisayoshi-yoshitake/' ) ); ?>">吉武 永賀</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/trainer/yoshizumi-iwasaki/' ) ); ?>">岩﨑 由純</a></li>
+              <li><a href="<?php echo esc_url(home_url('/trainer/hisayoshi-yoshitake/')); ?>">吉武 永賀</a></li>
+              <li><a href="<?php echo esc_url(home_url('/trainer/yoshizumi-iwasaki/')); ?>">岩﨑 由純</a></li>
             </ul>
           </div>
           <!-- /.mega-menu -->
         </li>
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/school/' ) ); ?>"><span>SCHOOL</span></a>
+          <a href="<?php echo esc_url(home_url('/school/')); ?>"><span>SCHOOL</span></a>
         </li>
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/books/' ) ); ?>"><span>BOOKS</span></a>
+          <a href="<?php echo esc_url(home_url('/books/')); ?>"><span>BOOKS</span></a>
         </li>
         <li class="global-nav__list__item">
-          <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>CONTACT</span></a>
+          <a href="<?php echo esc_url(home_url('/contact/')); ?>"><span>CONTACT</span></a>
         </li>
       </ul>
     </nav>
@@ -83,19 +106,19 @@
     <nav class="drawer-nav">
       <div class="drawer-nav__logo"></div>
       <ul class="drawer-menu">
-        <li><a href="<?php echo esc_url( home_url( '/seminar/' ) ); ?>">SEMINAR</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">NEWS</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/concept/' ) ); ?>">CONCEPT</a></li>
+        <li><a href="<?php echo esc_url(home_url('/seminar/')); ?>">SEMINAR</a></li>
+        <li><a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS</a></li>
+        <li><a href="<?php echo esc_url(home_url('/concept/')); ?>">CONCEPT</a></li>
         <li>
           <dl>
             <dt>TRAINER</dt>
-            <dd><a href="<?php echo esc_url( home_url( '/trainer/hisayoshi-yoshitake/' ) ); ?>">吉武永賀</a></dd>
-            <dd><a href="<?php echo esc_url( home_url( '/trainer/yoshizumi-iwasaki/' ) ); ?>">岩﨑由純</a></dd>
+            <dd><a href="<?php echo esc_url(home_url('/trainer/hisayoshi-yoshitake/')); ?>">吉武永賀</a></dd>
+            <dd><a href="<?php echo esc_url(home_url('/trainer/yoshizumi-iwasaki/')); ?>">岩﨑由純</a></dd>
           </dl>
         </li>
-        <li><a href="<?php echo esc_url( home_url( '/school/' ) ); ?>">SCHOOL</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/books/' ) ); ?>">BOOKS</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">CONTACT</a></li>
+        <li><a href="<?php echo esc_url(home_url('/school/')); ?>">SCHOOL</a></li>
+        <li><a href="<?php echo esc_url(home_url('/books/')); ?>">BOOKS</a></li>
+        <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
       </ul>
     </nav>
   </header>
