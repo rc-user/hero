@@ -12,25 +12,25 @@
     <div class="footer__txt">
       <nav class="footer__nav">
         <ul>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">SEMINAR</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">NEWS</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">CONCEPT</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/seminar/' ) ); ?>">SEMINAR</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">NEWS</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/concept/' ) ); ?>">CONCEPT</a></li>
           <li>
             <dl>
-              <dt><a href="#">TRAINER</a></dt>
-              <dd><a href="#">吉武 永賀</a></dd>
-              <dd><a href="#">岩﨑 由純</a></dd>
+              <dt>TRAINER</dt>
+              <dd><a href="<?php echo esc_url( home_url( '/trainer/hisayoshi-yoshitake/' ) ); ?>">吉武 永賀</a></dd>
+              <dd><a href="<?php echo esc_url( home_url( '/trainer/yoshizumi-iwasaki/' ) ); ?>">岩﨑 由純</a></dd>
             </dl>
           </li>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">SCHOOL</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">BOOKS</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">CONTACT</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/school/' ) ); ?>">SCHOOL</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/books/' ) ); ?>">BOOKS</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">CONTACT</a></li>
         </ul>
       </nav>
 
       <ul class="footer__link">
-        <li><a href="#">運営会社</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="https://rabbitc.co.jp/" target="_blank">運営会社</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/privacy.html' ) ); ?>">プライバシーポリシー</a></li>
       </ul>
 
       <small class="copyright">©2019 RABBIT CREATIVE Inc. All Rights Reserved.</small>
@@ -39,10 +39,10 @@
 
     <div class="footer__sns">
       <ul>
-        <li><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_youtube.png" alt=""></a></li>
+        <li><a href="https://www.youtube.com/channel/UC7BUbg9Y2tXG6vfVFuaOORw" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_youtube.png" alt=""></a></li>
         <li><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_instagram.png" alt=""></a></li>
-        <li><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_facebook.png" alt=""></a></li>
-        <li><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_twitter.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/herofact2020" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_facebook.png" alt=""></a></li>
+        <li><a href="https://twitter.com/hero_fact" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_twitter.png" alt=""></a></li>
       </ul>
     </div>
     <!-- /footer__sns -->
