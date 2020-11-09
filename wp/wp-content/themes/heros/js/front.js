@@ -7,14 +7,16 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
+    pauseOnFocus: false,
     variableWidth: true,
     speed: 400,
     cssEase: 'ease',
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          speed: 200,
+          speed: 400,
           centerMode: false,
           variableWidth: false,
         }
