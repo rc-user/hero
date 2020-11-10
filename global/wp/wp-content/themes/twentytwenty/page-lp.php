@@ -15,6 +15,7 @@ Template Name: 202011~LPページ
   </title>
 
   <?php wp_head(); ?>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lp.css" />
 
   <!-- Facebook Pixel Code -->
@@ -85,13 +86,46 @@ Template Name: 202011~LPページ
 
       <section class="slide">
         <h2>リアルタイム参加者の声</h2>
+        <div class="swiper-container top-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-text">
+                    <p>同僚からの勧めで参加しました。</p>
+                    <p>オンラインをどう活用するかがピンときていなかったが、イメージが広がりました。</p>
+                    <p>生保営業・N様</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-text">
+                    <p>withコロナの中での営業戦略を模索していましたが、</p>
+                    <p>力強い言葉で進むべき方向を照らしていただけました。</p>
+                    <p>国内生保営業・O様</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-text">
+                    <p>自分を変えるために参加しました。</p>
+                    <p>普段聞けないことで非常に刺激になりました。</p>
+                    <p>顧客への見方が変わりました。</p>
+                    <p>火災保険営業・O様</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-text">
+                    <p>同僚からの勧めで参加しました。</p>
+                    <p>オンラインをどう活用するかがピンときていなかったが、イメージが広がりました。</p>
+                    <p><span>生保営業・N様</span></p>
+                  </div>
+                </div>
+              </div>
+          </div>
       </section>
 
       <section class="profile">
         <h2>講師紹介</h2>
         <div class="profile-wrap">
           <div class="profile__img">
-            <img src="http://localhost/loveit-wordpress/wp-content/themes/lp2011/images/insurance_dx_sales/photo.jpg" alt="">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/insurance_dx_sales/photo.jpg" alt="">
           </div>
 
           <div class="profile__txt">
@@ -170,24 +204,8 @@ Template Name: 202011~LPページ
     </div>
     <!-- /.footer__wrap -->
   </footer>
-
-  <script>
-    $(function() {
-      // スクロールアニメーション
-      $('.scroll-link a').on('click', function(event) {
-        event.preventDefault();
-
-        var $this = $(this);
-        var linkTo = $this.attr('href');
-        var $target = $(linkTo);
-        var offset = 0;
-        var pos = $target.offset().top - offset;
-        $('html,body').animate({
-          scrollTop: pos
-        }, 400);
-      });
-    });
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/main.js"></script>
 </body>
 
 </html>
