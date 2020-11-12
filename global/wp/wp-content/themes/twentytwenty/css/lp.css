@@ -301,7 +301,6 @@ ul {
       color: #23324B; }
   .swiper-container {
     width: 80%;
-    height: 100%;
     margin: 0 auto; }
   .swiper-slide {
     width: 100%;
@@ -316,7 +315,7 @@ ul {
     align-items: center; }
     .swiper-slide .swiper-text {
       font-size: 2.3rem;
-      padding: 5%; }
+      padding: 0 5%; }
       .swiper-slide .swiper-text p {
         font-style: italic;
         font-weight: 700;
@@ -719,7 +718,6 @@ ul {
       color: #23324B; }
   .swiper-container {
     width: 80%;
-    height: 100%;
     margin: 0 auto; }
   .swiper-slide {
     width: 100%;
@@ -734,7 +732,7 @@ ul {
     align-items: center; }
     .swiper-slide .swiper-text {
       font-size: 2.3rem;
-      padding: 5%; }
+      padding: 0 5%; }
       .swiper-slide .swiper-text p {
         font-style: italic;
         font-weight: 700;
