@@ -1,10 +1,9 @@
 //mainvisual-slide
 var swiper = new Swiper('.swiper-container', {
   loop: true,
-  loopedSlides: 3,
+  loopedSlides: 1,
   slidesPerView: 'auto',
   centeredSlides: true,
-  spaceBetween: 50,
   autoplay: {
     delay: 5000,
   },
