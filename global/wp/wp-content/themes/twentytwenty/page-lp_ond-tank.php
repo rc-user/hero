@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 202011~LP>>thankページ
+Template Name: オンデマンド版LPページ>>thankページ
 */
 ?>
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ Template Name: 202011~LP>>thankページ
 
       <div class="footer__info">
         <h3 class="footer__info__ttl">ザ・ヒーロートレーニング 事務局</h3>
-        <p>〒550-0011 大阪府大阪市西区阿波座1-7-12 東新ビル5F<br>TEL. 06-6123-7650　　MAIL. cs@heros.support</p>
+        <p>〒530-0002 大阪府大阪市北区曽根崎新地1-13−22 御堂筋フロンティア 1階 WeWork (株)ラビットクリエイティブ<br>TEL. 06-6123-7650　　MAIL. cs@heros.support</p>
       </div>
       <!-- /.footer__info -->
     </div>

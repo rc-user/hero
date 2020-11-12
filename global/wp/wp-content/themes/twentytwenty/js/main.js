@@ -1,14 +1,18 @@
 //mainvisual-slide
-var topslider = new Swiper ('.top-slider', {
+var swiper = new Swiper('.swiper-container', {
   loop: true,
   loopedSlides: 3,
-  autoplay: 2000,
-  speed: 2000,
   slidesPerView: 'auto',
   centeredSlides: true,
-  spaceBetween: 50,  
+  spaceBetween: 50,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+     el: '.swiper-pagination',
+     clickable: true,
+   },
 });
-
 /*
 jQuery(function() {
   // スクロールアニメーション
