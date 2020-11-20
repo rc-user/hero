@@ -21,7 +21,7 @@
         <p>誰もがいつからでもオリジナルの<br class="sp">HEROになれる。<br>そうあなたも今ここから<br class="sp">スタートできるのです。</p>
 
         <h2 class="concept__ttl">HEROに育つ<br class="sp">最高の環境を。</h2>
-        <p>HEROとなる最短の方法は<br class="sp">HEROに出会うことです。<br>ここ「THE HERO TRAINING」では、過去20年に渡り、HEROを何人も育成し、<br>自身もHEROとして生きるトレーナーが<br class="sp">実績に基づいた確かな情報を<br class="sp">発信しています。<br>出会う、知る、再現する、磨き上げる、<br class="sp">そして独自のHEROとなる</p>
+        <p>HEROとなる最短の方法は<br class="sp">HEROに出会うことです。<br>ここ「THE HERO TRAINING」では、過去20年に渡り、HEROを何人も育成し、<br>自身もHEROとして生きるトレーナーが<br class="sp">実績に基づいた確かな情報を<br class="sp">発信しています。<br>出会う、知る、再現する、磨き上げる、<br class="sp">そして独自のHEROとなる<br>このプロセスの全てをサポートできる環境をご用意しています。</p>
 
 
         <div class="concept__trainer">

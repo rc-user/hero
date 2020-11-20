@@ -1,6 +1,6 @@
 $(function () {
   // スライダー
-  $('.mv').slick({
+  $('.media__list').slick({
     arrows: false,
     dots: false,
     autoplay: true,
