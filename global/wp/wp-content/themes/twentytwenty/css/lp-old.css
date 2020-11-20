@@ -1,0 +1,1345 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Roboto:wght@300;500&display=swap);
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Small Display
+-------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+  body {
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1.4rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    -webkit-backface-visibility: hidden;
+  }
+  .wrap {
+    max-width: 1000px;
+    margin: auto;
+    margin: auto 10px;
+  }
+  .ttl-caption {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    letter-spacing: 0.3em;
+    color: #ffc83c;
+  }
+  .ttl-caption li {
+    position: relative;
+  }
+  .ttl-caption li:not(:last-child) {
+    padding-right: 60px;
+  }
+  .ttl-caption li:not(:last-child)::before, .ttl-caption li:not(:last-child)::after {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    width: 26px;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: #ffc83c;
+  }
+  .ttl-caption li:not(:last-child)::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .ttl-caption li:not(:last-child)::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  h1 {
+    font-size: 8rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    font-size: 3.4rem;
+    margin-bottom: 30px;
+  }
+  h1 span {
+    color: #eb463c;
+  }
+  .top {
+    min-height: 1000px;
+    padding: 88px 0 360px;
+    background: #23324B url("../images/insurance_dx_sales/bg_top.png") center no-repeat;
+    background-size: cover;
+    padding: 40px 0 180px;
+  }
+  .top > p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 2.2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+  .top > p:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .top > p {
+    font-size: 1.7rem;
+  }
+  .mv {
+    position: relative;
+    margin-bottom: 75px;
+    margin-bottom: 40px;
+  }
+  .mv img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .mv img {
+    min-height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .mv__wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .mv__txt {
+    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  .mv__txt > p {
+    font-size: 2.5rem;
+    line-height: 2.1;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+  .mv__txt > p span {
+    line-height: 1;
+    display: inline-block;
+    padding: 6px 6px 8px 10px;
+    background-color: #000000;
+  }
+  .mv__txt > p b {
+    color: #ffc83c;
+  }
+  .mv__txt > p {
+    font-size: 1.6rem;
+    line-height: 2.6;
+  }
+  .mv__txt > p span {
+    padding: 3px 0px 4px 5px;
+  }
+  .mv__period {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+  }
+  .mv__period dt {
+    font-size: 6rem;
+  }
+  .mv__period dt > span {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #ffc83c));
+    background: -webkit-linear-gradient(transparent 70%, #ffc83c 70%);
+    background: linear-gradient(transparent 70%, #ffc83c 70%);
+  }
+  .mv__period dt > span span {
+    font-size: 3rem;
+  }
+  .mv__period dd {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .mv__period dd span {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #ffc83c));
+    background: -webkit-linear-gradient(transparent 60%, #ffc83c 60%);
+    background: linear-gradient(transparent 60%, #ffc83c 60%);
+  }
+  .mv__period dd:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  .mv__period dt {
+    font-size: 3rem;
+  }
+  .mv__period dt > span span {
+    font-size: 1.5rem;
+  }
+  .mv__period dd {
+    font-size: 2rem;
+  }
+  .entry-btn {
+    margin-bottom: 100px;
+    margin-bottom: 50px;
+  }
+  .entry-btn a {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 20px 19px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url("../images/insurance_dx_sales/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+  }
+  .entry-btn a:hover {
+    opacity: 0.7;
+  }
+  .entry-btn a {
+    font-size: 2.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 14px 10px;
+    border-radius: 6px;
+    background-position: center right 10px;
+    background-size: 24px;
+  }
+  .profile {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .profile__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .profile__img img {
+    max-width: 70%;
+    margin: auto;
+  }
+  .profile__txt {
+    font-size: 1.7rem;
+    padding: 40px 48px 40px 176px;
+    background-color: #ffffff;
+    font-size: 1.4rem;
+    margin: -50px 10px 0;
+    padding: 80px 10px 20px;
+  }
+  .profile__txt p {
+    line-height: 2.29;
+  }
+  .profile__txt p {
+    line-height: 1.8;
+  }
+  .profile__txt__wrap {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #23324B;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .profile__txt__ttl {
+    font-size: 1.7rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.2em;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  .profile__txt__ttl span {
+    font-size: 4rem;
+    display: block;
+  }
+  .profile__txt__ttl span {
+    font-size: 3rem;
+  }
+  .profile__txt__message {
+    position: relative;
+  }
+  .profile__txt__message__ttl {
+    margin-bottom: 1em;
+  }
+  .profile__txt__message__ttl br {
+    display: none;
+  }
+  .movie {
+    max-width: 1000px;
+    margin: -212px auto 0;
+    padding-bottom: 100px;
+    color: #23324B;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: -106px 0 0;
+    padding: 0 10px 45px;
+  }
+  .movie iframe {
+    width: 100%;
+    max-width: 1000;
+    max-height: 563px;
+    margin-bottom: 64px;
+  }
+  .movie iframe {
+    margin: 0 0 32px;
+  }
+  .movie__txt {
+    margin: 0 10px;
+  }
+  .movie__txt p {
+    font-size: 2.5rem;
+    line-height: 2.4;
+    letter-spacing: 0.1em;
+  }
+  .movie__txt p {
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+  .movie__txt p .pc {
+    display: none;
+  }
+  .movie__ttl {
+    font-size: 4rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-size: 3rem;
+  }
+  .skill {
+    padding: 100px 0 120px;
+    color: #ffffff;
+    background: #23324B url("../images/insurance_dx_sales/bg_skill.png") center no-repeat;
+    background-size: cover;
+    padding: 50px 0 60px;
+  }
+  .skill span {
+    color: #ffc83c;
+  }
+  .skill__ttl {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 2em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 2.5rem;
+  }
+  .skill__list {
+    font-size: 2.7rem;
+    max-width: 840px;
+    margin: auto;
+    letter-spacing: 0.15em;
+    font-size: 1.8rem;
+    margin: 0 10px;
+  }
+  .skill__list li {
+    font-weight: 400;
+    position: relative;
+    padding-left: 60px;
+    list-style: none;
+    counter-increment: skill-num;
+  }
+  .skill__list li::before, .skill__list li::after {
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+  }
+  .skill__list li::before {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc83c;
+  }
+  .skill__list li::after {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 2.5rem;
+    top: 8px;
+    left: 12px;
+    content: counter(skill-num);
+    color: #23324B;
+  }
+  .skill__list li:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .skill__list span {
+    color: #ffc83c;
+  }
+  .skill__list li {
+    padding-left: 30px;
+  }
+  .skill__list li::before {
+    top: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  .skill__list li::after {
+    font-size: 1.7rem;
+    top: 6px;
+    left: 5px;
+  }
+  #entry {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 0;
+    color: #23324B;
+    padding: 50px 10px;
+  }
+  .entry__ttl {
+    font-size: 5rem;
+    margin-bottom: 1em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 2.5rem;
+  }
+  .entry__period {
+    font-size: 2.2rem;
+    line-height: 1.2272;
+    margin-bottom: 70px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .entry__period li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  .entry__price {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 70px;
+    font-size: 2.6rem;
+  }
+  .entry__form input[type=text],
+  .entry__form select {
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    outline: none;
+  }
+  .entry__form input[type=text]:focus,
+  .entry__form select:focus {
+    border: 1px solid #217fc4;
+  }
+  .entry__form input[type=text].required {
+    background-color: #ffdddd;
+  }
+  .entry__form select {
+    font-size: 1.6rem;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
+  }
+  .entry__form .input {
+    margin-bottom: 28px;
+  }
+  .entry__form .form_input_label.required::after {
+    width: 1em;
+    height: 1.2em;
+    content: '*';
+    color: #ee3322;
+  }
+  .entry__form .my_left {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  .radiobutton_frame {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .radiobutton_frame #Proceedpaymode_120_42 {
+    display: none;
+  }
+  .radiobutton_frame .paymode_radio {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 40px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .radiobutton_frame .paymode_radio::before, .radiobutton_frame .paymode_radio::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+  }
+  .radiobutton_frame .paymode_radio::before {
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #23324B;
+  }
+  .radiobutton_frame .paymode_radio::after {
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #23324B;
+  }
+  .radiobutton_frame .paymode_radio::before {
+    left: 0;
+    width: 26px;
+    height: 26px;
+  }
+  .radiobutton_frame .paymode_radio::after {
+    left: 6px;
+    width: 14px;
+    height: 14px;
+  }
+  .form_input_submit {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .form_input_submit input[type=submit] {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 24px 20px 23px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url("../images/insurance_dx_sales/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+  }
+  .form_input_submit input[type=submit]:hover {
+    opacity: 0.7;
+  }
+  .form_input_submit input[type=submit] {
+    font-size: 2.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 80%;
+    padding: 17px 10px 16px;
+    border-radius: 6px;
+    background-position: center right 10px;
+    background-size: 24px;
+  }
+  .entry__notice {
+    margin-bottom: 70px;
+  }
+  .entry__notice p {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+  .privacy {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 840px;
+    margin: auto;
+    padding-bottom: 100px;
+    letter-spacing: 0.1em;
+    padding: 0 10px 50px;
+  }
+  .privacy p {
+    font-size: 1.4rem;
+    line-height: 2.714;
+  }
+  .privacy p:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .privacy p {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+  .privacy__ttl {
+    font-size: 2.2rem;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  #footer {
+    padding: 70px 0;
+    color: #323232;
+    background-color: #dce1e6;
+    padding: 35px 10px;
+  }
+  .footer__wrap {
+    font-weight: 300;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .footer__logo {
+    width: 156px;
+    margin-right: 40px;
+  }
+  .footer__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .footer__info {
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+  .footer__info p {
+    margin: 0;
+  }
+  .footer__info__ttl {
+    font-size: 2rem;
+  }
+  .footer__nav {
+    margin-right: auto;
+  }
+  .footer__nav ul {
+    list-style: none;
+  }
+  .footer__nav a {
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: #323232;
+  }
+  .footer__nav ul {
+    margin-bottom: 30px;
+  }
+  .footer__nav li {
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #323232;
+  }
+  .footer__nav li:first-child {
+    padding-top: 15px;
+    border-top: 1px solid #323232;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .copyright small {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+/* Large Display
+-------------------------------------------------- */
+@media print, screen and (min-width: 1001px) {
+  body {
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1.4rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    -webkit-backface-visibility: hidden;
+  }
+  .wrap {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .ttl-caption {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    letter-spacing: 0.3em;
+    color: #ffc83c;
+  }
+  .ttl-caption li {
+    position: relative;
+  }
+  .ttl-caption li:not(:last-child) {
+    padding-right: 60px;
+  }
+  .ttl-caption li:not(:last-child)::before, .ttl-caption li:not(:last-child)::after {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    width: 26px;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: #ffc83c;
+  }
+  .ttl-caption li:not(:last-child)::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .ttl-caption li:not(:last-child)::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  h1 {
+    font-size: 8rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+  }
+  h1 span {
+    color: #eb463c;
+  }
+  .top {
+    min-height: 1000px;
+    padding: 88px 0 360px;
+    background: #23324B url("../images/insurance_dx_sales/bg_top.png") center no-repeat;
+    background-size: cover;
+  }
+  .top > p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 2.2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+  .top > p:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .top > p .sp {
+    display: none;
+  }
+  .mv {
+    position: relative;
+    margin-bottom: 75px;
+  }
+  .mv img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .mv img {
+    min-height: 500px;
+  }
+  .mv__wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .mv__txt {
+    margin-bottom: 30px;
+  }
+  .mv__txt > p {
+    font-size: 2.5rem;
+    line-height: 2.1;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+  .mv__txt > p span {
+    line-height: 1;
+    display: inline-block;
+    padding: 6px 6px 8px 10px;
+    background-color: #000000;
+  }
+  .mv__txt > p b {
+    color: #ffc83c;
+  }
+  .mv__period {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+  }
+  .mv__period dt {
+    font-size: 6rem;
+  }
+  .mv__period dt > span {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #ffc83c));
+    background: -webkit-linear-gradient(transparent 70%, #ffc83c 70%);
+    background: linear-gradient(transparent 70%, #ffc83c 70%);
+  }
+  .mv__period dt > span span {
+    font-size: 3rem;
+  }
+  .mv__period dd {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .mv__period dd span {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #ffc83c));
+    background: -webkit-linear-gradient(transparent 60%, #ffc83c 60%);
+    background: linear-gradient(transparent 60%, #ffc83c 60%);
+  }
+  .mv__period dd:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  .entry-btn {
+    margin-bottom: 100px;
+  }
+  .entry-btn a {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 20px 19px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url("../images/insurance_dx_sales/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+  }
+  .entry-btn a:hover {
+    opacity: 0.7;
+  }
+  .profile {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 54px 0 0 200px;
+  }
+  .profile__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 320px;
+  }
+  .profile__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .profile__txt {
+    font-size: 1.7rem;
+    padding: 40px 48px 40px 176px;
+    background-color: #ffffff;
+  }
+  .profile__txt p {
+    line-height: 2.29;
+  }
+  .profile__txt__wrap {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #23324B;
+  }
+  .profile__txt__ttl {
+    font-size: 1.7rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.2em;
+  }
+  .profile__txt__ttl span {
+    font-size: 4rem;
+    display: block;
+  }
+  .profile__txt__message {
+    position: relative;
+  }
+  .profile__txt__message__ttl {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -7.5em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    letter-spacing: 0.1em;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .movie {
+    max-width: 1000px;
+    margin: -212px auto 0;
+    padding-bottom: 100px;
+    color: #23324B;
+  }
+  .movie iframe {
+    width: 100%;
+    max-width: 1000;
+    max-height: 563px;
+    margin-bottom: 64px;
+  }
+  .movie__txt {
+    padding-left: 134px;
+  }
+  .movie__txt p {
+    font-size: 2.5rem;
+    line-height: 2.4;
+    letter-spacing: 0.1em;
+  }
+  .movie__ttl {
+    font-size: 4rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+  }
+  .skill {
+    padding: 100px 0 120px;
+    color: #ffffff;
+    background: #23324B url("../images/insurance_dx_sales/bg_skill.png") center no-repeat;
+    background-size: cover;
+  }
+  .skill span {
+    color: #ffc83c;
+  }
+  .skill__ttl {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 2em;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .skill__ttl .sp {
+    display: none;
+  }
+  .skill__list {
+    font-size: 2.7rem;
+    max-width: 840px;
+    margin: auto;
+    letter-spacing: 0.15em;
+  }
+  .skill__list li {
+    font-weight: 400;
+    position: relative;
+    padding-left: 60px;
+    list-style: none;
+    counter-increment: skill-num;
+  }
+  .skill__list li::before, .skill__list li::after {
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+  }
+  .skill__list li::before {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc83c;
+  }
+  .skill__list li::after {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 2.5rem;
+    top: 8px;
+    left: 12px;
+    content: counter(skill-num);
+    color: #23324B;
+  }
+  .skill__list li:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .skill__list span {
+    color: #ffc83c;
+  }
+  #entry {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 0;
+    color: #23324B;
+  }
+  .entry__ttl {
+    font-size: 5rem;
+    margin-bottom: 1em;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .entry__ttl .sp {
+    display: none;
+  }
+  .entry__period {
+    font-size: 2.2rem;
+    line-height: 1.2272;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .entry__period li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  .entry__period li .sp {
+    display: none;
+  }
+  .entry__price {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 70px;
+  }
+  .entry__form input[type=text],
+  .entry__form select {
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    outline: none;
+  }
+  .entry__form input[type=text]:focus,
+  .entry__form select:focus {
+    border: 1px solid #217fc4;
+  }
+  .entry__form input[type=text].required {
+    background-color: #ffdddd;
+  }
+  .entry__form select {
+    font-size: 1.6rem;
+    padding: 1.5rem 1.8rem;
+    cursor: pointer;
+  }
+  .entry__form .input {
+    margin-bottom: 28px;
+  }
+  .entry__form .form_input_label.required::after {
+    width: 1em;
+    height: 1.2em;
+    content: '*';
+    color: #ee3322;
+  }
+  .entry__form .input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .entry__form .my_left {
+    text-align: center;
+    font-size: 2.5rem;
+    width: 8em;
+  }
+  .entry__form .my_right {
+    font-size: 2.5rem;
+    width: calc(100% - 8em - 40px);
+  }
+  .radiobutton_frame {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .radiobutton_frame #Proceedpaymode_120_42 {
+    display: none;
+  }
+  .radiobutton_frame .paymode_radio {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 40px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .radiobutton_frame .paymode_radio::before, .radiobutton_frame .paymode_radio::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+  }
+  .radiobutton_frame .paymode_radio::before {
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #23324B;
+  }
+  .radiobutton_frame .paymode_radio::after {
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #23324B;
+  }
+  .radiobutton_frame .sp {
+    display: none;
+  }
+  .form_input_submit {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .form_input_submit input[type=submit] {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 24px 20px 23px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #eb463c;
+    background-image: url("../images/insurance_dx_sales/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center right 40px;
+  }
+  .form_input_submit input[type=submit]:hover {
+    opacity: 0.7;
+  }
+  .entry__notice {
+    margin-bottom: 70px;
+  }
+  .entry__notice p {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+  .privacy {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 840px;
+    margin: auto;
+    padding-bottom: 100px;
+    letter-spacing: 0.1em;
+  }
+  .privacy p {
+    font-size: 1.4rem;
+    line-height: 2.714;
+  }
+  .privacy p:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .privacy__ttl {
+    font-size: 2.2rem;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  #footer {
+    padding: 70px 0;
+    color: #323232;
+    background-color: #dce1e6;
+  }
+  .footer__wrap {
+    font-weight: 300;
+    max-width: 1000px;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer__wrap:nth-of-type(1) {
+    margin-bottom: 28px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .footer__logo {
+    width: 156px;
+    margin-right: 40px;
+  }
+  .footer__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .footer__info {
+    line-height: 2;
+  }
+  .footer__info p {
+    margin: 0;
+  }
+  .footer__info__ttl {
+    font-size: 2rem;
+  }
+  .footer__nav {
+    margin-right: auto;
+  }
+  .footer__nav ul {
+    list-style: none;
+  }
+  .footer__nav a {
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: #323232;
+  }
+  .footer__nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer__nav li:not(:last-child) {
+    margin-right: 22px;
+    padding-right: 22px;
+    border-right: 1px solid #323232;
+  }
+  .copyright small {
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+/* Print CSS
+-------------------------------------------------- */

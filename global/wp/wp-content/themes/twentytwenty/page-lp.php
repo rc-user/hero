@@ -15,7 +15,7 @@ Template Name: LPページ
   </title>
 
   <?php wp_head(); ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lp.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/lp-old.css" />
 
   <!-- Facebook Pixel Code -->
   <script>
