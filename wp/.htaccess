@@ -2,58 +2,6 @@ RewriteEngine On
 RewriteCond %{HTTPS} !on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-RewriteRule ^ms/contents/01.html https://youtu.be/qFiU03wjxak [L,R=301]
-RewriteRule ^ms/contents/02.html https://youtu.be/bt4XdHCUAbQ [L,R=301]
-RewriteRule ^ms/contents/03.html https://youtu.be/0y71OB1r4_M [L,R=301]
-RewriteRule ^ms/contents/04.html https://youtu.be/Tc-0f1W5BEQ [L,R=301] 
-RewriteRule ^ms/contents/05.html https://youtu.be/iDFwqUFwSYI [L,R=301] 
-RewriteRule ^ms/contents/06.html https://youtu.be/IXYdbBG-K3s [L,R=301] 
-RewriteRule ^ms/contents/07.html https://youtu.be/0v4f15knJGw [L,R=301] 
-RewriteRule ^ms/contents/08.html https://youtu.be/m5taEsfFRHs [L,R=301] 
-RewriteRule ^ms/contents/09.html https://youtu.be/3HDQrQ0pQnk [L,R=301] 
-RewriteRule ^ms/contents/10.html https://youtu.be/k6w0g72UZnI [L,R=301] 
-RewriteRule ^ms/contents/11.html https://youtu.be/7I4gsq3M-lI [L,R=301]
-RewriteRule ^ms/contents/12.html https://youtu.be/BKcyBldwhcw [L,R=301]
-RewriteRule ^ms/contents/13.html https://youtu.be/WwDi1_8v3do [L,R=301] 
-RewriteRule ^ms/contents/14.html https://youtu.be/3uovh5YJUcU [L,R=301] 
-RewriteRule ^ms/contents/15.html https://youtu.be/YT5yGZiY5Uk [L,R=301] 
-RewriteRule ^ms/contents/16.html https://youtu.be/pvQ0IdbcH4w [L,R=301] 
-RewriteRule ^ms/contents/17.html https://youtu.be/6w1BnPj_KTA [L,R=301] 
-RewriteRule ^ms/contents/18.html https://youtu.be/N2SuGSnd2cg [L,R=301] 
-RewriteRule ^ms/contents/19.html https://youtu.be/-oMn4fDtXpU [L,R=301] 
-RewriteRule ^ms/contents/20.html https://youtu.be/BmSqnn0EFJY [L,R=301]
-RewriteRule ^ms/contents/21.html https://youtu.be/WwDeJlAwKe4 [L,R=301]
-
-RewriteRule ^ms/contents/22.html https://youtu.be/jeKtx9qW7V8 [L,R=301] 
-RewriteRule ^ms/contents/23.html https://youtu.be/A6QWLCvoP2I [L,R=301] 
-RewriteRule ^ms/contents/24.html https://youtu.be/-fpZcWKoeZY [L,R=301] 
-RewriteRule ^ms/contents/25.html https://youtu.be/b-_dgrMgN3c [L,R=301] 
-
-RewriteRule ^ms/contents/26.html https://youtu.be/3QKwDAj6pTU [L,R=301] 
-RewriteRule ^ms/contents/27.html https://youtu.be/vnR7cspQagw [L,R=301] 
-RewriteRule ^ms/contents/28.html https://youtu.be/IRcFG34RALc [L,R=301]
-RewriteRule ^ms/contents/29.html https://youtu.be/k0mHypoBIqU [L,R=301]
-RewriteRule ^ms/contents/30.html https://youtu.be/G5dOfV1m1vQ [L,R=301] 
-RewriteRule ^ms/contents/31.html https://youtu.be/heVm_ExZSZA [L,R=301]
-
-RewriteRule ^ms/contents/32.html https://youtu.be/A6IO22h0BcA [L,R=301] 
-RewriteRule ^ms/contents/33.html https://youtu.be/Gaum6ymkqg4 [L,R=301] 
-RewriteRule ^ms/contents/34.html https://youtu.be/06sEXQEq6Ps [L,R=301] 
-RewriteRule ^ms/contents/35.html https://youtu.be/O5uHyIRk1rk [L,R=301] 
-RewriteRule ^ms/contents/36.html https://youtu.be/d8SvzckrjgI [L,R=301] 
-
-RewriteRule ^ms/contents/37.html https://youtu.be/CYg9v2cXum0 [L,R=301] 
-RewriteRule ^ms/contents/38.html https://youtu.be/5C6YU4af-EY [L,R=301] 
-RewriteRule ^ms/contents/39.html https://youtu.be/4QPzewBIT3c [L,R=301] 
-RewriteRule ^ms/contents/40.html https://youtu.be/fiS47qUrrqk [L,R=301]
-RewriteRule ^ms/contents/41.html https://youtu.be/WlGCFdT2u8k [L,R=301]
-RewriteRule ^ms/contents/42.html https://youtu.be/SjaG9dPglVw [L,R=301] 
-RewriteRule ^ms/contents/43.html https://youtu.be/WzsCL13d_uY [L,R=301]
-
-RewriteRule ^ms/contents/46.html https://youtu.be/Jzt8Og1XpQ8 [L,R=301] 
-RewriteRule ^ms/contents/44.html https://youtu.be/yIb3TnENBSY [L,R=301] 
-RewriteRule ^ms/contents/45.html https://youtu.be/5IiCHR8tkSw [L,R=301] 
-
 # BEGIN WordPress
 # `BEGIN WordPress` から `END WordPress` までのディレクティブ (行) は
 # 動的に生成され、WordPress フィルターによってのみ修正が可能です。
