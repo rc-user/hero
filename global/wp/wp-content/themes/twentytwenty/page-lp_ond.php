@@ -62,9 +62,10 @@ Template Name: オンデマンド版LPページ
         <div class="main-movie">
           <h2>オンデマンド配信セミナー</h2>
           <div class="movie-wrap">
-            <p>無料視聴15分をお試しください。</p>
+            <p>無料視聴15分をお試しください。<br>
+            <span>※動画が再生されない場合はAdBlock等の広告ブロッカーをオフにしてください</span></p>
             <div class="youtube-wrap">
-              <iframe width="1000" height="563" src="https://www.youtube.com/embed/AM34dqFxjDI?rel=0" frameborder="0" allow="accelerometer; autoplay;" encrypted-media; gyroscope; picture-in-picture" allowfullscreen"></iframe>
+              <iframe src="https://drive.google.com/file/d/1nlYuIVQq7q9-JO9sK2URpe2qWa-M8LaI/preview" width="640" height="480"></iframe>
             </div>
           </div>
           <div class="entry-btn scroll-link">

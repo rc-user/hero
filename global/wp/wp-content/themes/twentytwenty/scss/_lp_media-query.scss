@@ -125,6 +125,9 @@ h1 {
       font-weight: 400;
       color: #fff;
       padding: 60px 0 25px 0;
+      span {
+        font-size: 1rem;
+      }
       @if $type == sp {
         font-size: 1.8rem;
         padding: 25px 0;

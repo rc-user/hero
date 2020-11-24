@@ -195,6 +195,8 @@ ul {
       padding: 60px 0 25px 0;
       font-size: 1.8rem;
       padding: 25px 0; }
+      .main-movie .movie-wrap p span {
+        font-size: 1rem; }
     .main-movie .youtube-wrap {
       max-width: 1000px;
       margin: 0 auto;
@@ -636,6 +638,8 @@ ul {
       font-weight: 400;
       color: #fff;
       padding: 60px 0 25px 0; }
+      .main-movie .movie-wrap p span {
+        font-size: 1rem; }
     .main-movie .youtube-wrap {
       max-width: 1000px;
       margin: 0 auto; }
