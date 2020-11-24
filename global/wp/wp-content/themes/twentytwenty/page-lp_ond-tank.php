@@ -63,7 +63,8 @@ Template Name: オンデマンド版LPページ>>thankページ
           <h2>オンデマンド配信セミナー</h2>
           <div class="movie-wrap">
             <p>お申込いただきありがとうございます<br>完全版動画セミナーを受講ください。<br>
-            <span>※動画が再生されない場合はAdBlock等の広告ブロッカーをオフにしてください</span></p>
+            <span>※動画が再生されない場合はAdBlock等の広告ブロッカーをオフにしてください</span><br>
+          <span>※スマートフォンの場合は右上のアイコンをタップすると別窓で再生されます。</span></p></p>
             <div class="youtube-wrap">
               <iframe src="https://drive.google.com/file/d/1njXp124g3LWTohv5M3rer9JxKgWOBlrX/preview" width="640" height="480"></iframe>
             </div>
